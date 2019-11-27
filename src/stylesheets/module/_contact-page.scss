@@ -8,15 +8,20 @@ $tab-active-border:$tab-active-background;
     &__tabs-wrap {
         display: flex;
         align-items: stretch;
-        li.current .address__text {
-            background: $tab-active-background;
-            color: $tab-active-text;
-            border-color: $tab-active-border;
-            a {
-                color: $tab-active-text;
-                transition: none;
-                &:hover {
-                    border-color: $tab-active-text;
+        li {
+            &:hover,
+            &.current {
+                .address__text {
+                    background: $tab-active-background;
+                    color: $tab-active-text;
+                    border-color: $tab-active-border;
+                    a {
+                        color: $tab-active-text;
+                        transition: none;
+                        &:hover {
+                            border-color: $tab-active-text;
+                        }
+                    }
                 }
             }
         }
