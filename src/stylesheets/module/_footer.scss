@@ -35,7 +35,7 @@
     }
 }
 
-@include media-breakpoint-down(sm) {
+@include media-breakpoint-down(md) {
     .footer {
         &__social-wrap {
             flex-direction: column;
@@ -43,6 +43,22 @@
                 margin: .5rem 0 1rem;
             }
         }
+        &__app {
+            justify-content: center;
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .footer {
+        &__app li {
+            width: 35%
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .footer {
         &__note {
             max-width: 100%;
         }

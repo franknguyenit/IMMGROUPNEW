@@ -2,14 +2,16 @@
     <div class="footer__top bg-black text-center text-white p-3">
         <div class="container">
             <div class="footer__social-wrap d-flex align-items-center justify-content-center">
-                <span class="mr-md-3 font-14">Kết nối với chúng tôi</span>
-                <span>{% include "modules/component/social.html" %}</span>
-                <ul class="d-flex ml-md-4">
+                <div class="d-inline-block d-md-flex mb-0 align-items-center">
+                    <span class="mr-md-3 font-14">Kết nối với chúng tôi</span>
+                    <span>{% include "modules/component/social.html" %}</span>
+                </div>
+                <ul class="footer__app d-flex ml-md-4">
                     <li class="mr-3">
-                        <a href="https://play.google.com/store/apps/details?id=com.immgroup.immcrm"><img style="max-width:185px" src="../../images/google-play.png" alt="google-play"></a>
+                        <a href="https://play.google.com/store/apps/details?id=com.immgroup.immcrm"><img src="../../images/google-play.png" alt="google-play"></a>
                     </li>
-                    <li vertical-align: middle;>
-                        <a href="https://apps.apple.com/us/app/imm-group/id1418437930?ls=1"><img style="max-width:185px" src="../../images/apple-store.png" alt="apple-store"></a>
+                    <li>
+                        <a href="https://apps.apple.com/us/app/imm-group/id1418437930?ls=1"><img src="../../images/apple-store.png" alt="apple-store"></a>
                     </li>
                 </ul>
             </div>
