@@ -1,0 +1,39 @@
+*:focus,
+button:focus,
+input:focus,
+*,
+input,
+button,
+*:active,
+input:active,
+button:active,
+.bootstrap-select .btn:focus,
+option {
+    outline: none !important;
+    outline: 0px !important;
+}
+
+html {
+    overflow-x: hidden;
+    margin: 0 auto;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    transition: $transition-base;
+    @include hover-focus-active {
+        text-decoration: none;
+    }
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

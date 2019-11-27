@@ -1,0 +1,169 @@
+.product-page {
+    .bg-gray {
+        background-color: #F7F7F7;
+    }
+    .bg-dark-gray {
+        background-color: #E8E8E8;
+    }
+    .top-text {
+        padding: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h3 {
+            font-size: 1rem;
+            font-weight: normal;
+            margin-bottom: 0;
+        }
+    }
+    .right-text {
+        h3 {
+            font-size: 1rem;
+            font-weight: normal;
+            margin-bottom: 0
+        }
+    }
+    .advantages__icon {
+        max-width: 5rem;
+        min-width: 5rem;
+    }
+    .condition__icon {
+        max-width: 1.8rem;
+        min-width: 1.8rem;
+        padding-right: 0;
+        margin-top: 4px;
+    }
+    .process {
+        &__wrap {
+            position: relative;
+            &:after {
+                position: absolute;
+                content: "";
+                height: 105%;
+                width: 2px;
+                background-color: $secondary;
+                top: -1%;
+                left: 6.45rem;
+            }
+        }
+        &__row {
+            display: flex;
+            margin: 0 0 1.5rem
+        }
+        &__icon {
+            width: rem(80px);
+            height: rem(80px);
+            border: 2px solid $secondary;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: .5rem;
+            img {
+                margin: auto;
+            }
+            &:after {
+                position: absolute;
+                content: "";
+                width: 10px;
+                height: 10px;
+                background-color: $secondary;
+                border-radius: 100%;
+                left: calc(100% + 21px);
+                top: calc((100% - 10px)/2);
+            }
+        }
+        &__steps {
+            display: -ms-flexbox;
+            display: flex;
+            margin: 0 0 0 1.5rem;
+            -ms-flex-align: center;
+            align-items: center;
+            border-bottom: 2px dashed #969696;
+            padding: 1rem 0 1rem 1.5rem;
+            flex-grow: 2;
+            max-width: 65%;
+        }
+        &__step {
+            text-align: center;
+            font-weight: $font-weight-bold;
+            span {
+                background-color: $secondary;
+                padding: .5rem 2rem;
+                color: #fff;
+                white-space: nowrap;
+                display: inline-block;
+            }
+        }
+        &__des {
+            font-weight: 500;
+            margin-left: 1rem;
+            padding: 0 1rem;
+            h3 {
+                font-size: 1rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+    @include media-breakpoint-only(md) {
+        .column-md {
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    @include media-breakpoint-down(lg) {
+        .top-text {
+            padding: 1rem
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        .banner__row {
+            flex-direction: column-reverse;
+        }
+        .condition__icon {
+            max-width: 1.5rem;
+            min-width: 1.5rem;
+        }
+        .advantages__icon {
+            max-width: 3.5rem;
+            min-width: 3.5rem;
+        }
+        .process {
+            &__wrap:after {
+                left: 0;
+            }
+            &__icon {
+                display: none;
+            }
+            &__steps {
+                margin-left: 0;
+                position: relative;
+                max-width: unset;
+                .text-primary {
+                    margin-bottom: .5rem;
+                    font-size: rem(13);
+                }
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    background-color: $secondary;
+                    border-radius: 100%;
+                    left: -4px;
+                    top: calc((100% - 10px)/2);
+                }
+                span {
+                    font-size: rem(13);
+                    padding: .2rem 1rem;
+                }
+            }
+            &__des {
+                padding: 0
+            }
+            &__row {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

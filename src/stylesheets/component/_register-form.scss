@@ -1,0 +1,150 @@
+.register {
+    &__wrap {
+        border: 1px solid $black;
+    }
+    &__input {
+        @include placeholder {
+            font-style: italic;
+        }
+    }
+    &__action {
+        display: inline-block;
+        position: relative;
+        .ajax-loader {
+            position: absolute;
+            &:after {
+                @include icon-font("\e02d", 1.2rem, 1.2);
+                color: $white;
+            }
+            &.is-active {
+                right: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: $primary;
+                border-radius: $btn-border-radius;
+                &:after {
+                    animation: loading 0.8s ease infinite;
+                }
+            }
+        }
+    }
+    &__title {
+        font-size: rem(30);
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .register__title {
+        font-size: 1.4rem;
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .register {
+        &__input {
+            @include placeholder {
+                font-size: rem(14);
+            }
+        }
+    }
+}
+
+// Register sticky
+.register__sticky {
+    position: fixed;
+    bottom: 0;
+    right: rem(20);
+    background: $white;
+    z-index: 150;
+    cursor: pointer;
+    &-btn {
+        background-color: $primary;
+        color: $white;
+        font-size: rem(14);
+        padding: .5rem 1rem;
+        width: 100%;
+        display: block;
+        &:not(.open) {
+            span {
+                opacity: 0;
+                display: none;
+            }
+        }
+        &.open {
+            h5 {
+                opacity: 0;
+            }
+            span {
+                opacity: 1;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                top: 0;
+                left: 0;
+                justify-content: center;
+                align-items: center;
+                font-size: 1.8rem;
+            }
+        }
+    }
+    &-form {
+        width: rem(300);
+        position: absolute;
+        right: 3rem;
+        bottom: 3rem;
+        background: $white;
+        border-radius: 10px;
+        box-shadow: 0 0 13px 0px rgba(0, 0, 0, 0.3);
+        &:after {
+            content: "";
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-top: 15px solid $white;
+            position: absolute;
+            right: 2rem;
+            bottom: -15px
+        }
+    }
+    &-title {
+        background-color: $primary;
+        color: $white;
+        font-size: rem(14);
+        padding: .8rem 1rem;
+        margin-bottom: 0;
+        text-align: center;
+        border-radius: 10px 10px 0 0;
+    }
+    .input-group-panel {
+        padding: 1rem;
+        .select,
+        .control-h {
+            height: rem(35);
+        }
+        .select-styled {
+            color: $body-color
+        }
+        textarea,
+        input {
+            @include placeholder {
+                font-style: italic;
+                font-size: rem(14);
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(xs) {
+    .register {
+        &__sticky-form {
+            right: .65rem
+        }
+        &__sticky {
+            right: 0;
+        }
+    }
+}

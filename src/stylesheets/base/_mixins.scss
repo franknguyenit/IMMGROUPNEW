@@ -1,0 +1,37 @@
+@mixin transform($value) {
+    -moz-transform: $value;
+    -o-transform: $value;
+    -ms-transform: $value;
+    -webkit-transform: $value;
+    transform: $value;
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &::-moz-placeholder {
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+}
+
+@mixin icon-font($content, $font, $line-height) {
+    font-family: 'ElegantIcons';
+    content: $content;
+    font-size: $font;
+    display: inline-block;
+    line-height: $line-height;
+}
+
+@mixin link ($color: $body-color, $hover-color: $primary) {
+    color: $color;
+    &:hover {
+        color: $hover-color
+    }
+}

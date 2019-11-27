@@ -1,0 +1,258 @@
+{% extends 'layouts/application.html' %}{% block bodyClass %}class="home-page"{% endblock %} {% block header %} {% include "modules/header.html" %} {% endblock %} {% block content %}
+<!-- Breadcrumb  -->
+{% include "modules/component/breadcrumb.html" %}
+<!-- slider  -->
+<section id="slider" class="slideshow carousel slide" data-ride="carousel">
+    <div class="slideshow__controler">
+        <div class="slideshow__controler-panel">
+            <a class="carousel-control-prev slideshow__control" href="#slider" data-slide="prev">
+                <span class="carousel-control-prev-icon"><i class="icon-prev arrow_carrot-left_alt2"></i></span>
+            </a>
+            <ul class="carousel-indicators">
+                <!-- Indicators -->
+                <li data-target="#slider" data-slide-to="0" class="active"></li>
+                <li data-target="#slider" data-slide-to="1"></li>
+                <li data-target="#slider" data-slide-to="2"></li>
+            </ul>
+            <a class="carousel-control-next slideshow__control" href="#slider" data-slide="next">
+                <span class="carousel-control-next-icon"><i class="icon-prev arrow_carrot-right_alt2"></i></span>
+            </a>
+        </div>
+    </div>
+    <!-- The slideshow -->
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="w-100 d-none d-md-block" src="../images/banner-100.jpg" alt="Los Angeles">
+            <img class="w-100 d-md-none" src="../images/banner-100-mb.jpg" alt="banner-100-mb">
+        </div>
+        <div class="carousel-item">
+            <img class="w-100 d-none d-md-block" src="../images/banner-100.jpg" alt="Chicago">
+            <img class="w-100 d-md-none" src="../images/banner-100-mb.jpg" alt="banner-100-mb">
+        </div>
+        <div class="carousel-item">
+            <img class="w-100 d-none d-md-block" src="../images/banner-100.jpg" alt="New York">
+            <img class="w-100 d-md-none" src="../images/banner-100-mb.jpg" alt="banner-100-mb">
+        </div>
+    </div>
+</section>
+<section class="service">
+    <div class="container">
+        <div class="bg-white p-3 p-lg-5">
+            <div class="row no-gutters service__row ">
+                <div class="col-md-6 col-lg-4 p-0 pr-md-3">
+                    <h1 class="line-title">CÁC SẢN PHẨM DỊCH VỤ IMM GROUP</h1>
+                    <div class="service__select-group text-white pb-3">
+                        <p class="pr-3"><strong>Các dịch vụ của IMM Group theo yêu cầu của nhà đầu tư</strong></p>
+                        <div class="text-center">
+                            <select class="service-list" id="serviceList">
+                                <option value="hide">Các dịch vụ</option>
+                                <option rel="icon-temperature">Định cư Mỹ</option>
+                                <option>Định cư Úc</option>
+                                <option>Định cư Châu Âu</option>
+                                <option>Bất động sản Mỹ</option>
+                                <option>Bất động sản Úc</option>
+                                <option>Bất động sản châu Âu</option>
+                                <option>Đầu tư nước ngoài vào Việt Nam</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 service__space">
+                    <div class="service__box">
+                        <a href="./page-dinh-cu-my.html" title="Định cư Mỹ">
+                            <h2 class="service__title mb-4">
+                                <span>Định cư Mỹ</span> <span class="arrow_carrot-right service__arrow-icon"></span>
+                            </h2>
+                            <div class="service__content-text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi eligendi vel Excepturi eligendi vel Excepturi
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 service__space">
+                    <div class="service__box">
+                        <a href="./page-dinh-cu-uc.html" title="Định cư Úc">
+                            <h2 class="service__title mb-4">
+                                <span>Định cư Úc</span> <span class="arrow_carrot-right service__arrow-icon"></span>
+                            </h2>
+                            <div class="service__content-text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi eligendi vel Excepturi eligendi vel Excepturi
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 service__space">
+                    <div class="service__box">
+                        <a href="./page-dinh-cu-chau-au.html" title="Định cư Châu Âu">
+                            <h2 class="service__title mb-4">
+                                <span>Định cư Châu Âu</span> <span class="arrow_carrot-right service__arrow-icon"></span>
+                            </h2>
+                            <div class="service__content-text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi eligendi vel Excepturi eligendi vel Excepturi
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 service__space">
+                    <div class="service__box">
+                        <a href="#" title="Bất động sản Châu Âu">
+                            <h2 class="service__title mb-4">
+                                <span>Bất động sản Châu Âu</span> <span class="arrow_carrot-right service__arrow-icon"></span>
+                            </h2>
+                            <div class="service__content-text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi eligendi vel Excepturi eligendi vel Excepturi
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 service__space">
+                    <div class="service__box">
+                        <a href="#" title="Đầu tư nước ngoài vào Việt Nam">
+                            <h2 class="service__title mb-4">
+                                <span>Đầu tư nước ngoài vào Việt Nam</span> <span class="arrow_carrot-right service__arrow-icon"></span>
+                            </h2>
+                            <div class="service__content-text">
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi eligendi vel Excepturi eligendi vel Excepturi
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="about">
+    <div class="container">
+        <div class="p-3 p-md-5 text-white" style="background-color: #B7B7B7;">
+            <h2 class="white-line-title mb-4 mb-md-5 d-inline-block">VỀ IMM GROUP</h2>
+            <div class="row">
+                <div class="col-md-8 col-lg-4 mb-4">
+                    <div class="about__des">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga laboriosam consectetur quam provident doloremque nulla natus magni molestias doloribus, voluptates, ab ullam commodi, asperiores vero voluptate illum aut aspernatur repellendus. Eaque veniam
+                        cupiditate possimus tenetur distinctio. Accusamus animi minus placeat.
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about__img-top">
+                        <a href="#!">
+                            <img src="../images/home/cau-chuyen-imm-group.jpg" alt="cau-chuyen-imm-group">
+                        </a>
+                    </div>
+                    <div class="about__bottom">
+                        <a href="#!">
+                            <h3 class="about__title text-uppercase">Câu chuyện của IMM group</h3>
+                        </a>
+                        <a href="#!" class="btn__more">Xem thêm <span class="btn__icon arrow_carrot-right"></span></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about__img-top">
+                        <a href="#!">
+                            <img src="../images/home/qua-trinh-phat-trien.jpg" alt="qua-trinh-phat-trien">
+                        </a>
+                    </div>
+                    <div class="about__bottom">
+                        <a href="#!">
+                            <h3 class="about__title text-uppercase">Quá trình phát triển</h3>
+                        </a>
+                        <a href="#!" class="btn__more">Xem thêm <span class="btn__icon arrow_carrot-right"></span></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about__img-top">
+                        <a href="#!">
+                            <img src="../images/home/muc-dich-kinh-doanh.jpg" alt="muc-dich-kinh-doanh">
+                        </a>
+                    </div>
+                    <div class="about__bottom">
+                        <a href="#!">
+                            <h3 class="about__title text-uppercase">Mục đích kinh doanh</h3>
+                        </a>
+                        <a href="#!" class="btn__more">Xem thêm <span class="btn__icon arrow_carrot-right"></span></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about__img-top">
+                        <a href="#!">
+                            <img src="../images/home/gia-tri-cot-loi.jpg" alt="gia-tri-cot-loi">
+                        </a>
+                    </div>
+                    <div class="about__bottom">
+                        <a href="#!">
+                            <h3 class="about__title text-uppercase">Giá trị cốt lõi</h3>
+                        </a>
+                        <a href="#!" class="btn__more">Xem thêm <span class="btn__icon arrow_carrot-right"></span></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about__img-top">
+                        <a href="#!">
+                            <img src="../images/home/triet-ly-kinh-doanh.jpg" alt="triet-ly-kinh-doanh">
+                        </a>
+                    </div>
+                    <div class="about__bottom">
+                        <a href="#!">
+                            <h3 class="about__title text-uppercase">Triết lý kinh doanh</h3>
+                        </a>
+                        <a href="#!" class="btn__more">Xem thêm <span class="btn__icon arrow_carrot-right"></span></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about__img-top">
+                        <a href="#!">
+                            <img src="../images/home/ban-giam-doc.jpg" alt="ban-giam-doc">
+                        </a>
+                    </div>
+                    <div class="about__bottom">
+                        <a href="#!">
+                            <h3 class="about__title text-uppercase">Ban giám đốc</h3>
+                        </a>
+                        <a href="#!" class="btn__more">Xem thêm <span class="btn__icon arrow_carrot-right"></span></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about__img-top">
+                        <a href="#!">
+                            <img src="../images/home/thien-nguyen.jpg" alt="thien-nguyen">
+                        </a>
+                    </div>
+                    <div class="about__bottom">
+                        <a href="#!">
+                            <h3 class="about__title text-uppercase">Thiện nguyện</h3>
+                        </a>
+                        <a href="#!" class="btn__more">Xem thêm <span class="btn__icon arrow_carrot-right"></span></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about__img-top">
+                        <a href="#!">
+                            <img src="../images/home/van-hoa-doanh-nghiep.jpg" alt="van-hoa-doanh-nghiep">
+                        </a>
+                    </div>
+                    <div class="about__bottom">
+                        <a href="#!">
+                            <h3 class="about__title text-uppercase">Văn hóa doanh nghiệp</h3>
+                        </a>
+                        <a href="#!" class="btn__more">Xem thêm <span class="btn__icon arrow_carrot-right"></span></a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="about__img-top">
+                        <a href="#!">
+                            <img src="../images/home/doi-tac.jpg" alt="doi-tac">
+                        </a>
+                    </div>
+                    <div class="about__bottom">
+                        <a href="#!">
+                            <h3 class="about__title text-uppercase">Đối tác</h3>
+                        </a>
+                        <a href="#!" class="btn__more">Xem thêm <span class="btn__icon arrow_carrot-right"></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% include "modules/component/register-footer.html" %}
+<!-- end register -->
+{% endblock %}

@@ -1,0 +1,47 @@
+.compare {
+    &__country-name {
+        a {
+            color: $black;
+            font-size: rem(30);
+            &:hover {
+                color: $primary
+            }
+        }
+    }
+    &__title {
+        font-size: 1rem;
+        font-weight: $font-weight-bold;
+    }
+    &__country {
+        ul,
+        ol {
+            list-style: disc;
+            li {
+                padding-bottom: .5rem;
+            }
+        }
+        .btn {
+            &__register {
+                padding: 0.375rem 1.5rem;
+            }
+            &__more {
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .compare__country-name a {
+        font-size: rem(20);
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .compare {
+        &__country .btn__register {
+            padding: 0.375rem 1rem;
+            font-size: 14px;
+        }
+    }
+}

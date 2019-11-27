@@ -1,0 +1,105 @@
+{% extends 'layouts/application.html' %}{% block bodyClass %}class="contact-page"{% endblock %} {% block header %} {% include "modules/header.html" %} {% endblock %} {% block content %}
+<!-- Breadcrumb  -->
+{% include "modules/component/breadcrumb.html" %}
+<!-- End breadcrumb  -->
+<h1 class="my-4 my-md-5 title text-center text-uppercase"><strong>liên hệ</strong></h1>
+<div class="contact-page">
+    <div class="container">
+        <h2 class="line-title d-inline-block text-uppercase">Các văn phòng của imm group</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Nav tabs -->
+                <div class="address__tabs" data-module="customTab">
+                    <ul class="address__tabs-wrap tabs row">
+                        <li class="tab-link current col-md-6 col-lg-3 mb-4 mb-lg-0" data-tab="tab-1">
+                            <span class="address__text">
+                                <p class="text-uppercase"><strong>tp. hồ chí minh</strong></p>
+                                <p>Tòa nhà IMM Group, 99 Nguyễn Đình Chiểu, Phường 6, Quận 3, TP. Hồ Chí Minh</p>
+                                <p class="mb-0">Tel: <a href="tel:+2873072777"><strong>(028) 730 72 777</strong></a></p>
+                                <p>Email: <a href="mailto:info@imm.group">info@imm.group</a></p>
+                            </span>
+                        </li>
+                        <div class="content-mb tab-1 d-md-none"></div>
+                        <li class="tab-link col-md-6 col-lg-3 mb-4 mb-lg-0" data-tab="tab-2">
+                            <span class="address__text">
+                                <p class="text-uppercase"><strong>hà nội</strong></p>
+                                <p>Tầng 10 East, Lotte Center, 54 Liễu Giai, Quận Ba Đình, Hà Nội</p>
+                                <p class="mb-0">Tel: <a href="tel:+2473072777"><strong>(024) 730 72 777</strong></a></p>
+                                <p>Email: <a href="mailto:info@imm.group">info@imm.group</a></p>
+                            </span>
+                        </li>
+                        <div class="content-mb tab-2 d-md-none"></div>
+                        <li class="tab-link col-md-6 col-lg-3 mb-4 mb-lg-0" data-tab="tab-3">
+                            <span class="address__text">
+                                <p class="text-uppercase"><strong>MỸ</strong></p>
+                                <p>17310 Red Hill Ave, Suite 335 Irvine, CA 92614</p>
+                                <p class="mb-0">Office tel: <a href="tel:9499100503"><strong>949.910.0503</strong></a></p>
+                                <p class="mb-0">Fax: 949.502.0746</p>
+                                <p>Email: <a href="mailto:info@imm.group">info@imm.group</a></p>
+                            </span>
+                        </li>
+                        <div class="content-mb tab-3 d-md-none"></div>
+                        <li class="tab-link col-md-6 col-lg-3 mb-4 mb-lg-0" data-tab="tab-4">
+                            <span class="address__text">
+                                <p class="text-uppercase"><strong>ÚC</strong></p>
+                                <p class="mb-0">IMM Group Australia Pty Ltd <br> Postal: PO Box 6215, Vermont South VIC 3133 <br>Office: Level 1, 205 Blackburn Road, Mount Waverley VIC 3149</p>
+                                <p>Email: <a href="mailto:info@imm.group">info@imm.group</a></p>
+                            </span>
+                        </li>
+                        <div class="content-mb tab-4 d-md-none"></div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Tab panes -->
+    <div class="row bg-ED mt-4 mt-md-5 ">
+        <div class="col-md-4 order-2 order-md-1">
+            <div class="contact__group offset-xl-4 offset-lg-2 offset-md-1 pb-4 pb-md-5">
+                <h2 class="white-line-title mt-4 mt-lg-5 d-inline-block text-uppercase text-black">kết nối với chúng tôi</h2>
+                {% include "modules/component/social.html" %}
+                <h2 class="white-line-title mt-4 d-inline-block text-uppercase text-black">để lại lời nhắn cho chúng tôi</h2>
+                <div class="form mb-4">
+                    <input type="text" class="form-control" placeholder="Tên">
+                    <input type="tel" class="form-control" placeholder="Số điện thoại">
+                    <input type="email" class="form-control" placeholder="Email">
+                    <textarea cols="30" class="form-control" rows="3" placeholder="Tin nhắn"></textarea>
+                    <p class="recaptcha py-3 px-4">
+                        <span class="d-block">Recaptcha Block</span>
+                        <input type="submit" class="btn mt-3" value="Gửi">
+                    </p>
+                </div>
+                <h2 class="white-line-title mt-4 d-inline-block text-uppercase text-black">tải ứng dụng imm group tại</h2>
+                <ul>
+                    <li class="mb-3">
+                        <a href="https://play.google.com/store/apps/details?id=com.immgroup.immcrm"><img src="../../images/google-play.png" alt="google-play"></a>
+                    </li>
+                    <li vertical-align: middle;>
+                        <a href="https://apps.apple.com/us/app/imm-group/id1418437930?ls=1"><img src="../../images/apple-store.png" alt="apple-store"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-8 order-1 order-md-2">
+            <div class="map__wrap">
+                <div id="tab-1" class="tab-content current">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.424713085034!2d106.68827081526024!3d10.77874726209713!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f13929bcb21%3A0x660810720461cff2!2sIMM%20Group%20Vietnam!5e0!3m2!1svi!2s!4v1574827152555!5m2!1svi!2s"
+                        frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+                <div id="tab-2" class="tab-content">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14896.056581843854!2d105.81250600000001!3d21.032120000000003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb48decf1f3659d26!2sIMM%20Immigration%20Hanoi!5e0!3m2!1svi!2sus!4v1574830274513!5m2!1svi!2sus"
+                        frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+                <div id="tab-3" class="tab-content">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13277.933664830807!2d-117.85101500000002!3d33.696438!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcdebedab83637%3A0x2530959d6d1b765d!2s17310%20Red%20Hill%20Ave%2C%20Irvine%2C%20CA%2092614!5e0!3m2!1svi!2sus!4v1574830232696!5m2!1svi!2sus"
+                        frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+                <div id="tab-4" class="tab-content">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12597.789687136205!2d145.147803!3d-37.873218!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad63f8d7002cf95%3A0xe31cf0049c5dd23e!2s205%20Blackburn%20Rd%2C%20Mount%20Waverley%20VIC%203149%2C%20%C3%9Ac!5e0!3m2!1svi!2sus!4v1574830304905!5m2!1svi!2sus"
+                        frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
