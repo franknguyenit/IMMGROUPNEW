@@ -22,3 +22,81 @@
         margin-left: 5px;
     }
 }
+
+//SLICK
+.slick {
+    &-prev,
+    &-next {
+        position: absolute;
+        display: block;
+        line-height: 0px;
+        font-size: 0px;
+        cursor: pointer;
+        background: transparent;
+        color: $body-color;
+        top: 50%;
+        padding: 0;
+        border: none;
+        outline: none;
+        width: rem(50);
+        height: rem(50);
+        z-index: 1;
+        @include transform(translate(0, -50%));
+        &:before {
+            @include icon-font("\35", 3rem, 50px);
+        }
+        &:hover {
+            color: $primary;
+        }
+    }
+    &-next {
+        right: rem(-50);
+    }
+    &-prev {
+        left: rem(-50);
+        &::before {
+            content: "\34"
+        }
+    }
+    @media screen and (max-width:1299px) {
+        &-next,
+        &-prev {
+            background-color: $secondary;
+            color: $white;
+            @include hover-focus-active {
+                color: $white
+            }
+        }
+        &-next {
+            right: rem(-15);
+        }
+        &-prev {
+            left: rem(-15);
+        }
+    }
+    @include media-breakpoint-down(md) {
+        &-next,
+        &-prev {
+            width: 2.5rem;
+            height: 2.5rem;
+            &:before {
+                font-size: 1.7rem;
+                line-height: 2.5rem;
+            }
+        }
+        &-next {
+            right: -.55rem;
+        }
+        &-prev {
+            left: -.55rem;
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        &-next {
+            right: 10px;
+        }
+        &-prev {
+            left: 10px;
+        }
+    }
+}

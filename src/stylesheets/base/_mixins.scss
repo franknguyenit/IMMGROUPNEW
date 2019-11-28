@@ -21,10 +21,10 @@
     }
 }
 
-@mixin icon-font($content, $font, $line-height) {
+@mixin icon-font($content, $font-size, $line-height) {
     font-family: 'ElegantIcons';
     content: $content;
-    font-size: $font;
+    font-size: $font-size;
     display: inline-block;
     line-height: $line-height;
 }

@@ -2,6 +2,7 @@
 //lib
 @import "./node_modules/bootstrap/scss/bootstrap";
 @import "./node_modules/bootstrap-select/dist/css/bootstrap-select";
+@import "./node_modules/slick-carousel/slick/slick.scss";
 @import "./lib/elegant-icon";
 @import "./lib/menu";
 //base
@@ -28,3 +29,4 @@
 @import "./component/breadcrumb";
 @import "./component/blog";
 @import "./component/pagination";
+@import "./component/img-custom";

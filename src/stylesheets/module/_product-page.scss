@@ -28,10 +28,9 @@
         min-width: 5rem;
     }
     .condition__icon {
-        max-width: 1.8rem;
-        min-width: 1.8rem;
+        max-width: 2rem;
+        min-width: 2rem;
         padding-right: 0;
-        margin-top: 4px;
     }
     .process {
         &__wrap {
@@ -105,15 +104,80 @@
             }
         }
     }
+    .project {
+        position: relative;
+        overflow: hidden;
+        .skew-bg {
+            width: 95%;
+            height: 100%;
+            position: absolute;
+            left: 5%;
+            top: 0;
+            z-index: 1;
+            @include transform(skewX(-34deg));
+        }
+        iframe {
+            position: relative;
+            z-index: 1;
+        }
+        &__number {
+            font-size: rem(80);
+            line-height: 70px;
+        }
+        &__name {
+            line-height: 36px;
+        }
+        &__name-wrap {
+            background-color: $secondary;
+            color: $white;
+            text-transform: uppercase;
+            padding: 2rem;
+            height: 100%;
+        }
+        &__name-wrap-style02 {
+            padding: 2rem;
+            border: 1px solid $black;
+            margin-right: -1px;
+            height: 100%;
+            text-transform: uppercase;
+        }
+        &__slider-img,
+        &__detail {
+            position: relative;
+            z-index: 2;
+        }
+    }
+    @include media-breakpoint-down(lg) {
+        .top-text {
+            padding: 1rem
+        }
+        .project {
+            &__name {
+                line-height: 30px;
+                font-size: 1.5rem;
+            }
+            &__number {
+                font-size: 3rem;
+                line-height: 45px;
+            }
+        }
+    }
     @include media-breakpoint-only(md) {
         .column-md {
             flex-direction: column;
             text-align: center;
         }
     }
-    @include media-breakpoint-down(lg) {
-        .top-text {
-            padding: 1rem
+    @include media-breakpoint-down(md) {
+        .project {
+            &__name-wrap-style02,
+            &__name-wrap {
+                padding: 1rem
+            }
+            &__name {
+                line-height: 25px;
+                font-size: 1.2rem;
+            }
         }
     }
     @include media-breakpoint-down(sm) {
@@ -164,6 +228,14 @@
             &__row {
                 margin-bottom: 0;
             }
+        }
+        .project__name-wrap-style02,
+        .project__name-wrap {
+            margin-right: 0;
+            margin-bottom: -1px
+        }
+        .project iframe {
+            height: 270px
         }
     }
 }

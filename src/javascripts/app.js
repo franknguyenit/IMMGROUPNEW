@@ -17,6 +17,7 @@ globalSite.scrollTop();
 globalSite.showStickyRegister();
 globalSite.compareSameHeight();
 globalSite.blogDetailsCustom();
+globalSite.slickCustom();
 
 for (var i = 0; i < moduleElements.length; i++) {
     const el = moduleElements[i]

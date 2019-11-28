@@ -49,13 +49,6 @@
     }
 }
 
-// @include media-breakpoint-up(md) {
-//     .footer {
-//         &__app li {
-//             width: 35%
-//         }
-//     }
-// }
 @include media-breakpoint-down(sm) {
     .footer {
         &__note {
