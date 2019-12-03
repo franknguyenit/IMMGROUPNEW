@@ -1,6 +1,6 @@
 import bowser from 'bowser';
-import slick from 'slick-carousel';
 import matchHeight from 'jquery-match-height';
+import owlCarousel from 'owl.carousel';
 class globalSite {
     static showContentWhenPageLoadFinish() {
         setTimeout(function() {
@@ -149,6 +149,53 @@ class globalSite {
             if ($(this).parent('p').next().children().is('em')) {
                 $(this).parent('p').next().width(imgW).css({ 'margin': '0 auto 1rem', 'font-size': '14px', 'background-color': '#ededed', "padding": '.7rem', "text-align": 'center' });
                 $(this).parent('p').css({ "margin-bottom": "0", "text-align": "center" });
+            }
+        });
+    }
+    static customOwlSlide() {
+        $('.project__slider-img').owlCarousel({
+            margin: 15,
+            items: 2,
+            nav: true,
+            dots: false,
+            responsive: {
+                768: {
+                    items: 3,
+                },
+                1200: {
+                    mouseDrag: false,
+                    items: 3,
+                }
+            }
+        })
+        $('.owl-carousel.img__slide-bottom4').owlCarousel({
+            margin: 15,
+            items: 2,
+            nav: true,
+            responsive: {
+                768: {
+                    items: 4,
+                    mouseDrag: false,
+                },
+            }
+        })
+    }
+    static scrollToRegister() {
+        $('.btn__register').click(function() {
+            $('html, body').animate({
+                scrollTop: $("#register").offset().top
+            }, 500)
+        });
+    }
+    static videoPlayBtn() {
+        $('.video').parent().click(function() {
+            if ($(this).children(".video").get(0).paused) {
+                $(this).children(".video").get(0).play();
+                $(this).children(".playpause").fadeOut();
+                $(this).prop("contols", true);
+            } else {
+                $(this).children(".video").get(0).pause();
+                $(this).children(".playpause").fadeIn();
             }
         });
     }

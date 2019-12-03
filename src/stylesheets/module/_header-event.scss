@@ -1,0 +1,25 @@
+$header-bg: $black;
+$header-text: $white;
+.header-event {
+    background-color: $black;
+    color: $header-text;
+    &__menu {
+        display: flex;
+        align-items: center;
+        flex-grow: 2;
+        li {
+            flex: 1;
+            padding: .3rem 0;
+            a {
+                color: $header-text;
+                display: block;
+                text-align: center;
+                border-left: 1px solid $white;
+                margin: .4rem 0
+            }
+        }
+    }
+    &__register {
+        background-color: $primary;
+    }
+}

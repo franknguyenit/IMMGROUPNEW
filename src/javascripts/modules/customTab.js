@@ -3,7 +3,6 @@ export default class customTab {
     constructor(element) {
         this.element = $(element);
         this.customTab();
-        this.firstLoadMap();
     }
     customTab() {
         $('ul.tabs li').click(function() {
@@ -15,14 +14,10 @@ export default class customTab {
             $(this).addClass('current');
             $("#" + tab_id).addClass('current');
             if ($(window).innerWidth() < 767) {
-                $(this).next('.content-mb').toggleClass('open-map').html($("#" + tab_id).addClass('current'));
-                $(this).next('.content-mb').siblings.removeClass('open-map')
+                $("html, body").animate({
+                    scrollTop: $('.map__wrap').offset().top - 75
+                }, 1000);
             }
         })
-    }
-    firstLoadMap() {
-        if ($(window).innerWidth() < 767) {
-            $('ul.tabs li.current').next('.content-mb').toggleClass('open-map').html($("#tab-1").addClass('current'))
-        }
     }
 }

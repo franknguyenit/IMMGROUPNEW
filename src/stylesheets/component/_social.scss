@@ -2,6 +2,9 @@
     &-group {
         li {
             display: inline-block;
+            &:hover {
+                opacity: .8;
+            }
         }
     }
     &-icon {
