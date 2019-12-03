@@ -73,6 +73,7 @@
         padding: .5rem 1rem;
         width: 100%;
         display: block;
+        box-shadow: 0 0 5px 0 rgba(1, 3, 4, 0.19);
         &:not(.open) {
             span {
                 opacity: 0;

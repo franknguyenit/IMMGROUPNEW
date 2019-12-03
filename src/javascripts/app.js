@@ -20,6 +20,8 @@ globalSite.blogDetailsCustom();
 globalSite.customOwlSlide();
 globalSite.scrollToRegister();
 globalSite.videoPlayBtn();
+globalSite.linkTo();
+globalSite.responsiveMenu();
 
 for (var i = 0; i < moduleElements.length; i++) {
     const el = moduleElements[i]

@@ -3,6 +3,12 @@ $header-text: $white;
 .header-event {
     background-color: $black;
     color: $header-text;
+    display: flex;
+    .header__menu-panel {
+        .dl-trigger {
+            position: relative;
+        }
+    }
     &__menu {
         display: flex;
         align-items: center;
@@ -15,11 +21,129 @@ $header-text: $white;
                 display: block;
                 text-align: center;
                 border-left: 1px solid $white;
-                margin: .4rem 0
+                margin: .4rem 0;
+                white-space: nowrap;
+                padding: 0 .5rem;
+                span {
+                    border-bottom: 1px solid transparent;
+                }
+                &:hover span {
+                    border-bottom-color: $white;
+                }
+            }
+            &.header-event__home a span {
+                border-bottom: 0
             }
         }
     }
-    &__register {
+    &__home {
+        span.icon_house {
+            border-bottom: 0;
+            font-size: 1.3rem;
+        }
+    }
+    &__menu .header-event__register {
         background-color: $primary;
+        border-left: 1px solid $white;
+        a {
+            border: 0
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .header-event {
+        .header__menu-panel {
+            max-width: rem(50);
+        }
+        &__menu {
+            li.header-event__home a {
+                border-left: 0;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .toggle-children__menu {
+        width: 2rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        height: 100%;
+        span,
+        span:before,
+        span:after {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            line-height: 6px;
+            text-align: center;
+            background: $white;
+            left: 50%;
+            margin-left: -3px;
+            border-radius: 50%;
+            transition: .3s all ease;
+            display: inline-block;
+        }
+        span {
+            top: 45%;
+            &:before,
+            &:after {
+                content: ""
+            }
+            &::before {
+                bottom: 100%;
+                margin-bottom: 3px
+            }
+            &:after {
+                top: 100%;
+                margin-top: 3px
+            }
+        }
+        &.active span {
+            @include transform(scale(0.7));
+            &:before {
+                @include transform(translateY(18px));
+            }
+            &:after {
+                @include transform(translateY(-18px));
+            }
+        }
+    }
+    .header-event {
+        &__menu {
+            flex-direction: column;
+            align-items: flex-start;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            background-color: $header-bg;
+            box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.5);
+            li {
+                width: 100%;
+                padding: .5rem 1rem;
+                a {
+                    border: 0;
+                    text-align: left;
+                    margin: 0;
+                }
+            }
+            .header-event__register {
+                border-left: 0;
+            }
+        }
+        &__logo {
+            margin: .4rem auto;
+            img {
+                max-width: 80px;
+            }
+        }
+        &__main-menu {
+            position: absolute;
+            left: 0;
+            top: 0
+        }
     }
 }
