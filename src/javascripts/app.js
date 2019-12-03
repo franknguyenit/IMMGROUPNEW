@@ -17,7 +17,9 @@ globalSite.scrollTop();
 globalSite.showStickyRegister();
 globalSite.compareSameHeight();
 globalSite.blogDetailsCustom();
-globalSite.slickCustom();
+globalSite.customOwlSlide();
+globalSite.scrollToRegister();
+globalSite.videoPlayBtn();
 
 for (var i = 0; i < moduleElements.length; i++) {
     const el = moduleElements[i]

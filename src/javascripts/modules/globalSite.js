@@ -1,6 +1,6 @@
 import bowser from 'bowser';
-import slick from 'slick-carousel';
 import matchHeight from 'jquery-match-height';
+import owlCarousel from 'owl.carousel';
 class globalSite {
     static showContentWhenPageLoadFinish() {
         setTimeout(function() {
@@ -152,39 +152,51 @@ class globalSite {
             }
         });
     }
-    static slickCustom() {
-        $('.img__slide-bottom4').slick({
+    static customOwlSlide() {
+        $('.project__slider-img').owlCarousel({
+            margin: 15,
+            items: 2,
+            nav: true,
             dots: false,
-            speed: 500,
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            arrows: true,
-            responsive: [{
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 1
+            responsive: {
+                768: {
+                    items: 3,
                 },
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
+                1200: {
+                    mouseDrag: false,
+                    items: 3,
                 }
-            }]
+            }
+        })
+        $('.owl-carousel.img__slide-bottom4').owlCarousel({
+            margin: 15,
+            items: 2,
+            nav: true,
+            responsive: {
+                768: {
+                    items: 4,
+                    mouseDrag: false,
+                },
+            }
+        })
+    }
+    static scrollToRegister() {
+        $('.btn__register').click(function() {
+            $('html, body').animate({
+                scrollTop: $("#register").offset().top
+            }, 500)
         });
-        $('.project__slider-img').slick({
-            dots: false,
-            speed: 500,
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            arrows: true,
-            responsive: [{
-                breakpoint: 576,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            }]
+    }
+    static videoPlayBtn() {
+        $('.video').parent().click(function() {
+            if ($(this).children(".video").get(0).paused) {
+                $(this).children(".video").get(0).play();
+                $(this).children(".playpause").fadeOut();
+                $(this).prop("contols", true);
+            } else {
+                $(this).children(".video").get(0).pause();
+                $(this).children(".playpause").fadeIn();
+            }
         });
     }
 }

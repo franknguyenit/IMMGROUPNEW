@@ -2,7 +2,7 @@
 //lib
 @import "./node_modules/bootstrap/scss/bootstrap";
 @import "./node_modules/bootstrap-select/dist/css/bootstrap-select";
-@import "./node_modules/slick-carousel/slick/slick.scss";
+@import "../../node_modules/owl.carousel/src/scss/owl.carousel.scss";
 @import "./lib/elegant-icon";
 @import "./lib/menu";
 //base
@@ -17,11 +17,13 @@
 @import "./base/font";
 // module 
 @import "./module/header";
+@import "./module/header-event";
 @import "./module/footer";
 @import "./module/home-page";
 @import "./module/compare-nation";
 @import "./module/product-page";
 @import "./module/contact-page";
+@import "./module/event-page";
 //component
 @import "./component/form";
 @import "./component/register-form";

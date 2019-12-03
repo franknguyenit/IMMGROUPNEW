@@ -1,0 +1,308 @@
+.event .banner {
+    position: relative;
+    background-color: $black;
+    padding-bottom: 2rem;
+    &__caption {
+        @include media-breakpoint-up(md) {
+            position: absolute;
+            bottom: -1px;
+            left: 2rem;
+            background-color: #fff;
+            padding: 2.5rem 0 0 3rem;
+            max-width: 50%;
+            &:after {
+                content: "";
+                left: 100%;
+                height: 100%;
+                top: 0;
+                width: 50%;
+                background-color: #fff;
+                position: absolute;
+                z-index: 1;
+                @include transform(skew(25deg) translate(-80%));
+            }
+            &-inner {
+                position: relative;
+                z-index: 2;
+            }
+            h1,
+            h3 {
+                font-family: 'commerceB';
+            }
+            h1 {
+                line-height: 4.5vw;
+                font-size: 4vw;
+            }
+            h3 {
+                font-size: 2.3vw;
+            }
+        }
+    }
+    &__register {
+        margin-top: 1vw
+    }
+}
+
+.event .summary {
+    h2 {
+        font-size: rem(30);
+        line-height: rem(36);
+    }
+    h3 {
+        font-size: rem(20);
+        line-height: rem(28);
+    }
+}
+
+.event .selling-point {
+    padding: 2rem 2rem 2rem 0;
+    &__item {
+        align-items: center;
+        margin-bottom: 1.3rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__icon {
+        text-align: center;
+        width: rem(70);
+        height: rem(70);
+        line-height: rem(68);
+        border: 1px solid $white;
+        padding: .5rem;
+        margin: auto;
+        img {
+            margin: auto
+        }
+    }
+    &__text {
+        h3 {
+            font-size: 1rem;
+            color: $white;
+            line-height: 1.5rem;
+            margin-bottom: 0
+        }
+    }
+}
+
+.event {
+    .bg-benefit {
+        z-index: -1;
+    }
+    .special {
+        &__title {
+            h2 {
+                font-size: 3.5vw;
+                font-family: 'commerceB';
+                line-height: 3.8vw;
+            }
+        }
+        &__number {
+            font-size: rem(50);
+            font-family: 'commerceB';
+            margin-right: 1rem;
+        }
+        &__block {
+            padding: 5rem 0;
+        }
+        &__text {
+            font-size: rem(20);
+        }
+    }
+    .title-border-line {
+        font-size: rem(20);
+        border-bottom: 1px solid $primary;
+        padding-bottom: .3rem;
+        &.white {
+            border-bottom-color: $white;
+        }
+    }
+}
+
+.event .time {
+    &__wrap {
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 3rem 0;
+        &.right {
+            justify-content: flex-end;
+        }
+    }
+    &__location {
+        text-align: center;
+        padding-right: 3vw
+    }
+    &__location-text {
+        font-size: rem(30);
+        font-family: 'commerceB';
+    }
+    &__event {
+        border-left: 2px solid $white;
+        padding-left: 1rem;
+        font-size: 1.5rem;
+        .date {
+            font-size: 2.2rem;
+        }
+    }
+}
+
+@include media-breakpoint-down(lg) {
+    .event {
+        .banner__caption:after {
+            @include transform(skew(20deg) translate(-75%))
+        }
+        .selling-point__icon {
+            width: 3.5rem;
+            height: 3.5rem;
+            img {
+                max-width: 80%;
+            }
+        }
+        .special__text {
+            font-size: 1rem;
+        }
+        .adviser {
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .event {
+        .banner__caption {
+            left: 0;
+            padding: 2rem 0rem 2rem 2rem;
+            .banner__register {
+                margin: 1rem 0 0;
+            }
+        }
+        .summary h2 {
+            font-size: 1.5rem;
+            line-height: 2rem;
+        }
+        .special {
+            &__title {
+                h2 {
+                    font-size: 2.5rem;
+                }
+                h3 {
+                    font-size: 1rem;
+                    padding-bottom: .2rem;
+                }
+            }
+            &__number {
+                line-height: 1.2;
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .event {
+        .bg-benefit {
+            margin-right: calc(50% - 50vw) !important;
+            margin-left: calc(50% - 50vw) !important;
+        }
+        .title-border-line {
+            font-size: 1rem;
+            padding-bottom: .2rem;
+        }
+        // .banner__caption {
+        //     padding: 1rem;
+        //     h1 {
+        //         line-height: 7.5vw;
+        //         font-size: 7vw;
+        //     }
+        //     h3 {
+        //         font-size: 2.3vw;
+        //         font-size: 1rem;
+        //     }
+        //     &:after {
+        //         @include transform(skew(15deg) translate(-45%))
+        //     }
+        // }
+        .banner {
+            padding: 0
+        }
+        .banner__caption {
+            padding: 1rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &-inner {
+                padding: 1rem;
+                background: rgba(255, 255, 255, .7);
+                h1 {
+                    font-size: 1.5rem;
+                    br {
+                        display: none;
+                    }
+                }
+                h3 {
+                    font-size: 1rem;
+                }
+            }
+        }
+        .summary {
+            h2 {
+                font-size: 1.2rem;
+                line-height: 1.5rem;
+                strong br {
+                    display: none;
+                }
+            }
+            h3 {
+                font-size: 1rem;
+                line-height: 1.5rem;
+            }
+        }
+        .selling-point {
+            padding: 2rem 0;
+        }
+        .special {
+            &__block {
+                padding: 2rem 0;
+            }
+            &__number {
+                font-size: 2rem;
+            }
+            &__title h2 {
+                font-size: 2rem;
+                line-height: 2.2rem;
+            }
+        }
+        .time {
+            &__wrap {
+                flex-direction: column;
+                padding: 1.5rem 0;
+            }
+            &__event {
+                font-size: 1rem;
+                border-left: 0;
+                border-top: 2px solid #fff;
+                padding: 1rem 0 0;
+                text-align: center;
+                .date {
+                    font-size: 1.5rem;
+                    line-height: 2.3rem;
+                }
+                p {
+                    line-height: 1.2rem;
+                }
+            }
+            &__location {
+                padding-right: 0;
+            }
+        }
+        .adviser h2 {
+            font-size: 1.2rem;
+        }
+    }
+}
