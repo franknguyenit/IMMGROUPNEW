@@ -7,6 +7,7 @@ $header-text: $white;
     .header__menu-panel {
         .dl-trigger {
             position: relative;
+            margin-top: 6px;
         }
     }
     &__menu {
@@ -15,7 +16,7 @@ $header-text: $white;
         flex-grow: 2;
         li {
             flex: 1;
-            padding: .3rem 0;
+            padding: .5rem 0;
             a {
                 color: $header-text;
                 display: block;
@@ -45,6 +46,7 @@ $header-text: $white;
     &__menu .header-event__register {
         background-color: $primary;
         border-left: 1px solid $white;
+        height: 100%;
         a {
             border: 0
         }

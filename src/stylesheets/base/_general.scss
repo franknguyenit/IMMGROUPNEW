@@ -228,6 +228,10 @@ video[poster] {
     }
 }
 
+body.modal-open {
+    padding-right: 0 !important;
+}
+
 #questionModal {
     .modal-dialog {
         max-width: 80vw;

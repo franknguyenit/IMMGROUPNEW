@@ -43,6 +43,7 @@ class globalSite {
         });
         $('.overlay-layer').click(function() {
             $(this).removeClass('d-block');
+            $('.header__btn-icon').removeClass('open-menu')
         })
     }
     static openSearchBox() {
@@ -214,7 +215,11 @@ class globalSite {
         if ($(window).innerWidth() < 768) {
             $('.toggle-children__menu').click(function() {
                 $(this).toggleClass('active');
-                $('.header-event__menu').toggleClass('d-none')
+                $('.header-event__menu').toggleClass('d-none');
+            })
+            $('.header-event__menu li').click(function() {
+                $('.header-event__menu').toggleClass('d-none');
+                $('.toggle-children__menu').removeClass('active')
             })
         }
     }
