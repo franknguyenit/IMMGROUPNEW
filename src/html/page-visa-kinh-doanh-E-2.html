@@ -15,7 +15,20 @@
             </div>
         </div>
     </section>
-    <section class="mt-4 mt-md-5">
+    <!-- submenu  -->
+    <section class="bg-ED">
+        <div class="container">
+            <ul class="submenu-linkto ">
+                <li><a href="#!" class="link-to text-hover-border" data-id='what-is'>Visa E-2 là gì?</a></li>
+                <li><a href="#!" class="link-to text-hover-border" data-id="benifit">Lợi ích và lợi thế</a></li>
+                <li><a href="#!" class="link-to text-hover-border" data-id="advantages">Ưu điểm</a></li>
+                <li><a href="#!" class="link-to text-hover-border" data-id="condition">Điều kiện đối với nhà đầu tư Việt Nam</a></li>
+                <li><a href="#!" class="link-to text-hover-border" data-id="process">Quy trình</a></li>
+                <li><a href="#!" class="link-to text-hover-border" data-id="related-blog">Bài viết liên quan</a></li>
+            </ul>
+        </div>
+    </section>
+    <section class="mt-4 mt-md-5" id="what-is">
         <div class="container">
             <div class="row align-items-end">
                 <div class="col-md-6">
@@ -34,7 +47,7 @@
             </div>
         </div>
     </section>
-    <section class="mt-4 mt-md-5">
+    <section class="mt-4 mt-md-5" id="benifit">
         <div class="container">
             <h2 class="line-title d-inline-block">LỢI ÍCH VÀ LỢI THẾ</h2>
             <div class="row content-row">
@@ -91,7 +104,7 @@
             </div>
         </div>
     </section>
-    <section class="advantages py-4 py-md-5">
+    <section class="advantages py-4 py-md-5" id="advantages">
         <div class="container">
             <h2 class="line-title d-inline-block">ƯU ĐIỂM</h2>
             <div class="row content-row">
@@ -149,7 +162,7 @@
             </p>
         </div>
     </section>
-    <section class="condition py-4 py-md-5 bg-dark-gray">
+    <section class="condition py-4 py-md-5 bg-dark-gray" id="condition">
         <div class="container">
             <h2 class="line-title d-inline-block">ĐIỀU KIỆN ĐỐI VỚI NHÀ ĐẦU TƯ VIỆT NAM</h2>
             <div class="row">
@@ -180,7 +193,7 @@
             </div>
         </div>
     </section>
-    <section class="pt-4 pt-md-5 process">
+    <section class="pt-4 pt-md-5 process" id="process">
         <div class="container">
             <h2 class="line-title d-inline-block">QUY TRÌNH</h2>
             <div class="process__wrap">
@@ -263,7 +276,9 @@
 </div>
 
 <!-- Blog  -->
-{% include "modules/component/blog.html" %}
+<div id="related-blog">
+    {% include "modules/component/blog.html" %}
+</div>
 <!-- end blog  -->
 {% include "modules/component/register-footer.html" %}
 <!-- end register -->
