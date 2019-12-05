@@ -37,11 +37,11 @@
         background-color: $main-title-line-color;
     }
     @include media-breakpoint-down(lg) {
-        font-size: rem(25);
+        font-size: 2.5rem;
         margin-bottom: 1.5rem;
     }
     @include media-breakpoint-down(sm) {
-        font-size: rem(20);
+        font-size: 1.6rem;
         margin-bottom: 1rem;
     }
 }
