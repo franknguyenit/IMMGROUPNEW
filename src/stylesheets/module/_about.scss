@@ -197,6 +197,20 @@
     }
 }
 
+.leadership {
+    &__img {
+        img {
+            margin: auto;
+            border: 1px solid #dee2e6;
+        }
+    }
+    &__content {
+        h3 {
+            font-size: rem(18);
+        }
+    }
+}
+
 @include media-breakpoint-up(lg) {
     .our-philosophy .content-text {
         padding-bottom: 23rem;

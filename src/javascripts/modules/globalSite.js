@@ -118,8 +118,10 @@ class globalSite {
     }
     static showStickyRegister() {
         $('#registerSticky').click(function() {
-            $(this).find('.register__sticky-btn').toggleClass('open');
-            $(this).find('.register__sticky-form ').toggleClass('d-none');
+            $(this).toggleClass('open');
+        });
+        $('.register__sticky-form').click(function(e) {
+            e.stopPropagation();
         });
     }
     static compareSameHeight() {

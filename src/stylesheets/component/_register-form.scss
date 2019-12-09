@@ -66,6 +66,13 @@
     background: $white;
     z-index: 150;
     cursor: pointer;
+    &:not(.open) {
+        .register__sticky-btn {
+            span.icon_close {
+                display: none;
+            }
+        }
+    }
     &-btn {
         background-color: $primary;
         color: $white;
@@ -74,29 +81,6 @@
         width: 100%;
         display: block;
         box-shadow: 0 0 5px 0 rgba(1, 3, 4, 0.19);
-        &:not(.open) {
-            span {
-                opacity: 0;
-                display: none;
-            }
-        }
-        &.open {
-            h5 {
-                opacity: 0;
-            }
-            span {
-                opacity: 1;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                display: flex;
-                top: 0;
-                left: 0;
-                justify-content: center;
-                align-items: center;
-                font-size: 1.8rem;
-            }
-        }
     }
     &-form {
         width: rem(300);
@@ -139,6 +123,30 @@
             @include placeholder {
                 font-style: italic;
                 font-size: rem(14);
+            }
+        }
+    }
+    &.open {
+        .register__sticky {
+            &-form {
+                display: block !important;
+            }
+            &-btn {
+                h5 {
+                    opacity: 0;
+                }
+                span {
+                    opacity: 1;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    top: 0;
+                    left: 0;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.8rem;
+                }
             }
         }
     }
