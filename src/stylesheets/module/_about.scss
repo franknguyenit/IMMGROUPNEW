@@ -75,6 +75,19 @@
     &__timeline {
         font-size: 12pt;
     }
+    &__row {
+        &:first-child {
+            margin-top: 2.5rem;
+        }
+        &:last-child {
+            .square-line {
+                display: none;
+            }
+            .line {
+                display: none;
+            }
+        }
+    }
     .year {
         font-family: "commerceB";
         color: #fff;
