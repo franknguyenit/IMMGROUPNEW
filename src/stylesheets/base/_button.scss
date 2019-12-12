@@ -10,3 +10,31 @@
         color: $primary
     }
 }
+
+a.btn-close {
+    color: $white;
+    font-size: 3rem;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    cursor: pointer;
+    border: 3px solid transparent;
+    border-radius: 100%;
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    display: inline-block;
+    text-align: center;
+    &:hover {
+        border-color: $white;
+        color: $white;
+        @include transform(rotate(90deg));
+    }
+    .icon-close {
+        margin-left: -2px;
+    }
+    @include media-breakpoint-down(sm) {
+        top: 0;
+        right: 0
+    }
+}

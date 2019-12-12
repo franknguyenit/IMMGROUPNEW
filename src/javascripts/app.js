@@ -11,7 +11,7 @@ globalSite.checkDevice();
 globalSite.showContentWhenPageLoadFinish();
 globalSite.detectBrowser();
 globalSite.openMenu();
-globalSite.openSearchBox();
+globalSite.SearchBoxEffect();
 globalSite.selectCustom();
 globalSite.scrollTop();
 globalSite.showStickyRegister();

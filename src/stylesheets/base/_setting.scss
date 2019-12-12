@@ -48,15 +48,13 @@ $header-bottom-text:$white;
 
 /*MENU*/
 
+$menu-bg: $white;
+$menu-color:$black;
+$menu-border-color: rgba(0, 0, 0, .15);
+$menu-bg-hover:$primary;
+$menu-color-hover:$white;
 $nav-link-padding-y: .7rem;
 $nav-link-padding-x: 1rem;
-$dropdown-min-width: 26rem;
-$dropdown-link-color: $body-color;
-$dropdown-link-hover-color:$white;
-$dropdown-link-hover-bg:$primary;
-$dropdown-border-radius:0;
-$dropdown-border-width:0;
-$dropdown-spacer:0;
 
 /*FORM */
 

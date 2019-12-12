@@ -4,7 +4,6 @@
 @import "./node_modules/bootstrap-select/dist/css/bootstrap-select";
 @import "../../node_modules/owl.carousel/src/scss/owl.carousel.scss";
 @import "./lib/elegant-icon";
-@import "./lib/menu";
 //base
 @import "./base/mixins";
 @import "./base/normalize";
@@ -25,6 +24,7 @@
 @import "./module/contact-page";
 @import "./module/event-page";
 @import "./module/about";
+@import "./module/menu";
 //component
 @import "./component/form";
 @import "./component/register-form";

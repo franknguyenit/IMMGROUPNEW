@@ -106,18 +106,12 @@
     };
 
     $script([
-        'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js',
-        'https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'
+        'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'
     ], 'vendor', function() {
-        $script(['js/modernizr-custom.js', 'js/dlmenu.js', 'javascripts/app.js'], 'myScript', function() {
+        $script(['js/slinky.js', 'javascripts/app.js'], 'myScript', function() {
             $(function() {
-                $('#dl-menu').dlmenu({
-                    animationClasses: {
-                        classin: 'dl-animate-in-2',
-                        classout: 'dl-animate-out-2'
-                    }
-                });
                 $(".owl-carousel").owlCarousel();
+                window.slinky = $('#menu').slinky();
             });
         });
     });

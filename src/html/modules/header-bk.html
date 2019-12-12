@@ -1,27 +1,19 @@
 <header id="header" class="header" data-module="header">
     <div class="header__top">
         <div class="header__menu">
-            <a class="header__toggle-menu" href="#!" id="btnMenu">
-                <span class="icon_menu"></span>
-            </a>
-            <div class="header__switch-language switch-language">
-                <ul class="d-flex align-items-center">
-                    <li class="active"><b>Tiếng Việt</b></li>
-                    <li class="mx-1">|</li>
-                    <li><a href="#!">English</a></li>
-                </ul>
-            </div>
-            <div id="menu">
-                <ul>
-                    <li>
-                        <a class="nav-link" href="../index.html">Trang Chủ</a>
-                    </li>
+            <div id="dl-menu" class="header__menu-panel dl-menuwrapper">
+                <button class="dl-trigger">Open Menu</button>
+                <a class="header__toggle-menu header__btn-icon " href="#!" id="btnMenu">
+                    <span>Menu</span>
+                </a>
+                <ul class="dl-menu">
+                    <li><a class="nav-link" href="../index.html">Trang Chủ</a></li>
                     <li>
                         <a class="nav-link" href="#!">Các sản phẩm dịch vụ IMM group</a>
-                        <ul class="sub-menu">
+                        <ul class="dl-submenu">
                             <li>
                                 <a class="nav-link" href="../page-dinh-cu-my.html">Định cư Mỹ</a>
-                                <ul class="sub-menu">
+                                <ul class="dl-submenu">
                                     <li><a class="nav-link" href="../page-visa-dinh-cu-EB-5.html">Visa Định cư EB-5</a></li>
                                     <li><a class="nav-link" href="../page-visa-kinh-doanh-E-2.html">Visa Kinh doanh E-2</a></li>
                                     <li><a class="nav-link" href="../page-visa-doanh-nhan-L-1A.html">Visa Doanh Nhân L-1A</a></li>
@@ -31,10 +23,10 @@
                             </li>
                             <li>
                                 <a class="nav-link" href="#">Định Cư Úc</a>
-                                <ul>
+                                <ul class="dl-submenu">
                                     <li>
                                         <a class="nav-link" href="#">Visa Định Cư Úc Có Điều Kiện</a>
-                                        <ul class="sub-menu">
+                                        <ul class="dl-submenu">
                                             <li><a class="nav-link" href="../page-visa-dien-doanh-nhan-188A.html">Visa Doanh Nhân 188A</a></li>
                                             <li><a class="nav-link" href="../page-visa-dien-dau-tu-trai-phieu-188B.html">Visa Diện Đầu Tư Trái Phiếu 188B</a></li>
                                             <li><a class="nav-link" href="../page-visa-dien-dau-tu-trong-yeu-188C.html">Visa Đầu Tư Trọng Yếu 188C</a></li>
@@ -42,18 +34,19 @@
                                     </li>
                                     <li>
                                         <a class="nav-link" href="#">Visa Định Cư Úc Vĩnh Viễn</a>
-                                        <ul class="sub-menu">
+                                        <ul class="dl-submenu">
                                             <li><a class="nav-link" href="../page-visa-dien-doanh-nhan-doi-moi-888A.html">Visa Doanh Nhân 888A</a></li>
                                             <li><a class="nav-link" href="../page-visa-dien-dau-tu-trai-phieu-888B.html">Visa Đầu Tư 888B</a></li>
                                             <li><a class="nav-link" href="../page-visa-dien-dau-tu-trong-yeu-888C.html">Visa Đầu Tư Trọng Yếu 888C</a></li>
                                             <li><a class="nav-link" href="../page-visa-dien-doanh-nhan-tai-nang-132A.html">Visa Doanh Nhân Tài Năng 132A</a></li>
                                         </ul>
                                     </li>
+                                    <li><a class="nav-link" href="../page-dinh-cu-uc.html">So sánh các chương trình Úc</a></li>
                                 </ul>
                             </li>
                             <li>
                                 <a class="nav-link" href="#">Quốc tịch châu âu</a>
-                                <ul class="sub-menu">
+                                <ul class="dl-submenu">
                                     <li><a class="nav-link" href="../page-BDS-Sip.html">Đầu tư định cư đảo Síp</a></li>
                                     <li><a class="nav-link" href="#">Đầu tư định cư Hy Lạp</a></li>
                                     <li><a class="nav-link" href="#">Đầu tư định cư Ireland</a></li>
@@ -62,11 +55,14 @@
                                     <li><a class="nav-link" href="#">So sánh các chương trình Châu Âu</a></li>
                                 </ul>
                             </li>
+                            <li>
+                                <a class="nav-link" href="#">Quốc tịch Caribe</a>
+                            </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">Về imm group</a>
-                        <ul class="sub-menu">
+                        <a href="#" class="nav-link">Về imm group</a>
+                        <ul class="dl-submenu">
                             <li><a class="nav-link" href="#">Câu chuyện imm group</a></li>
                             <li><a class="nav-link" href="#">quá trình phát triển</a></li>
                             <li><a class="nav-link" href="#">mục đích kinh doanh</a></li>
@@ -78,9 +74,7 @@
                             <li><a class="nav-link" href="../page-partner.html">đối tác</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a class="nav-link" href="../page-lien-he.html">liên hệ</a>
-                    </li>
+                    <li><a class="nav-link" href="../page-lien-he.html">liên hệ</a></li>
                 </ul>
             </div>
         </div>
@@ -88,13 +82,19 @@
             <div class="row align-items-center no-gutters">
                 <div class="col-md-5"></div>
                 <div class="col-md-2 logo text-center">
-                    <a href="./index.html"><img class="mx-auto" src="../../images/logo.png" alt="IMM logo"></a>
+                    <a href="/_"><img class="mx-auto" src="../../images/logo.png" alt="IMM logo"></a>
                 </div>
-                <div class="col-md-5"></div>
+                <div class="col-md-5 text-right">
+                    <ul class="header__links d-none d-lg-flex justify-content-end">
+                        <li><a href="#">Về IMM Group</a></li>
+                        <li><a href="#">Các dịch vụ của IMM Group</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="header__search d-md-none">
-            <a href="#!" id="btnSearch" class="btn-search">
+        <div class="header__search">
+            <a class=" header__btn-icon" href="#!" id="btnSearch">
                 <span class="header__icon icon_search"></span>
             </a>
         </div>
@@ -104,11 +104,10 @@
                     <label for="search__input">Search</label>
                     <input type="text" id="search-input" name="search" class="search__input" placeholder="Tìm kiếm">
                     <button type="button" class="search__submit">
-                        <span class="header__icon icon_search"></span>
-                    </button>
+                            <span class="header__icon icon_search"></span>
+                        </button>
                 </div>
             </div>
-            <a class="btn-close" id="search_close"><span class="icon_close"></span></a>
         </div>
     </div>
 </header>

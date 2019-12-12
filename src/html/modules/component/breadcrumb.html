@@ -1,25 +1,25 @@
 <div class="header__bottom">
-    <div class="container">
-        <div class="d-flex justify-content-sm-between align-items-sm-center mobile-display">
-            <div class="left">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
-                        <li class="breadcrumb-item active" aria-current="page"><span>Đầu tư định cư châu Âu</span></li>
-                    </ol>
-                </nav>
+    <div class="d-flex align-items-sm-center d-sm-reverse justify-content-sm-between">
+        <div class="left">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Trang Chủ</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><span>Đầu tư định cư châu Âu</span></li>
+                </ol>
+            </nav>
+        </div>
+        <div class="right d-flex align-items-center">
+            <div class="header__switch-language switch-language">
+                <ul class="d-flex align-items-center">
+                    <li class="active"><b>Tiếng Việt</b></li>
+                    <li class="mx-1">|</li>
+                    <li><a href="#!">English</a></li>
+                </ul>
             </div>
-            <div class="right d-flex align-items-center justify-content-center justify-content-md-end">
-                <div class="header__switch-language switch-language">
-                    <ul class="d-flex align-items-center">
-                        <li class="active"><b>Tiếng Việt</b></li>
-                        <li class="mx-1">|</li>
-                        <li><a href="#!">English</a></li>
-                    </ul>
-                </div>
-                <div class="header__social">
-                    {% include "modules/component/social.html" %}
-                </div>
+            <div class="header__search">
+                <a href="#!" id="btnSearch" class="btn-search">
+                    <span class="header__icon icon_search"></span>
+                </a>
             </div>
         </div>
     </div>

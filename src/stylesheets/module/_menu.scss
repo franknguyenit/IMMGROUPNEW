@@ -1,0 +1,89 @@
+// required styles
+.slinky-menu {
+    overflow: hidden;
+    transform: translateZ(0);
+    >ul {
+        left: 0;
+        position: relative;
+        transform: translateZ(0);
+    }
+    ul,
+    li {
+        list-style: none;
+        margin: 0;
+    }
+    ul {
+        width: 100%;
+    }
+    a {
+        align-items: center;
+        display: flex;
+        span {
+            flex: 1;
+            line-height: 1.4;
+        }
+    }
+    li ul {
+        display: none;
+        left: 100%;
+        position: absolute;
+        top: 0;
+    }
+    .header {
+        display: flex;
+        .title {
+            flex: 1;
+            line-height: 1.4;
+            margin: 0;
+            order: 1;
+        }
+    }
+}
+
+// default theme
+#menu {
+    background: $menu-bg;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    display: none;
+    li a {
+        text-transform: uppercase;
+        white-space: nowrap;
+        font-weight: $font-weight-bold;
+        padding: $nav-link-padding-y $nav-link-padding-x;
+        font-size: rem(20);
+        &.back {
+            width: 100%;
+            line-height: 1.2;
+        }
+    }
+    li {
+        line-height: 1;
+        border-bottom: 1px solid $menu-border-color;
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    a:not(.back) {
+        color: $menu-color;
+        @include hover-focus-active {
+            background: $menu-bg-hover;
+            color: $menu-color-hover;
+        }
+    }
+    .next::after,
+    .back::before {
+        @include icon-font('\35', 1.5rem, 1rem);
+    }
+    .back::before {
+        transform: scaleX(-1);
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    #menu li a {
+        font-size: 1rem;
+    }
+}

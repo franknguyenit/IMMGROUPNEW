@@ -3,6 +3,12 @@ body.home {
     .breadcrumb {
         display: none;
     }
+    .header__bottom {
+        padding: 0
+    }
+    header.header {
+        margin-bottom: 1rem
+    }
 }
 
 .slideshow {
