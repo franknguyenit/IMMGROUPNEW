@@ -37,10 +37,11 @@ class globalSite {
         }
     }
     static openMenu() {
-        $('.header__toggle-menu').click(function() {
+        $('.toggle-menu').click(function() {
             $('#menu').toggleClass('d-block');
             $('.overlay-layer').toggleClass('d-block');
             $('.header__menu').toggleClass('menu-active');
+            $(this).toggleClass('active');
             if ($(window).innerWidth() < 767) {
                 var language = $('.header__top .header__switch-language');
                 language.toggleClass('d-block');
@@ -51,7 +52,8 @@ class globalSite {
             $(this).removeClass('d-block');
             $('#menu').removeClass('d-block');
             $('.header__menu').removeClass('menu-active');
-            $('.header__top .header__switch-language').removeClass('d-block')
+            $('.header__top .header__switch-language').removeClass('d-block');
+            $('.toggle-menu').removeClass('active');
         })
     }
     static SearchBoxEffect() {

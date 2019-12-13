@@ -4,12 +4,6 @@ $header-text: $white;
     background-color: $black;
     color: $header-text;
     display: flex;
-    .header__menu-panel {
-        .dl-trigger {
-            position: relative;
-            margin-top: 6px;
-        }
-    }
     &__menu {
         display: flex;
         align-items: center;
@@ -36,6 +30,35 @@ $header-text: $white;
                 border-bottom: 0
             }
         }
+        .menu-item {
+            padding: 0;
+            text-align: center;
+            a.toggle-menu {
+                border-left: 0;
+                margin: auto;
+                padding: 0;
+            }
+        }
+    }
+    &__toggle-menu {
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        .toggle-icon {
+            background: $header-text;
+            top: 16px;
+            left: 0;
+            &::before,
+            &:after {
+                background: $header-text;
+            }
+        }
+        &:hover {
+            color: $header-text;
+            span {
+                border-bottom: 0
+            }
+        }
     }
     &__home {
         span.icon_house {
@@ -58,11 +81,6 @@ $header-text: $white;
         .header__menu-panel {
             max-width: rem(50);
         }
-        &__menu {
-            li.header-event__home a {
-                border-left: 0;
-            }
-        }
     }
 }
 
@@ -70,7 +88,7 @@ $header-text: $white;
     .toggle-children__menu {
         width: 2rem;
         position: absolute;
-        top: 0;
+        top: -2px;
         right: 0;
         cursor: pointer;
         height: 100%;
@@ -135,17 +153,21 @@ $header-text: $white;
             .header-event__register {
                 border-left: 0;
             }
+            .menu-item {
+                display: none;
+            }
+        }
+        &__toggle-menu {
+            position: absolute;
+            top: 8px;
+            padding: 0;
+            left: 15px;
         }
         &__logo {
             margin: .7rem auto;
             img {
                 max-width: 50px;
             }
-        }
-        &__main-menu {
-            position: absolute;
-            left: 0;
-            top: 0
         }
     }
 }
