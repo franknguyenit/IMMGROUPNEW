@@ -37,12 +37,10 @@
         background-color: $main-title-line-color;
     }
     @include media-breakpoint-down(lg) {
-        font-size: 2.5rem;
         margin-bottom: 1.5rem;
     }
     @include media-breakpoint-down(sm) {
-        font-size: 1.6rem;
-        margin-bottom: 1rem;
+        font-size: 1.3rem;
     }
 }
 
@@ -75,16 +73,55 @@
     }
 }
 
-.switch-language li {
-    font-weight: $font-weight-lighter;
-    &.active {
-        font-weight: $font-weight-bold;
-    }
-    a {
-        border-bottom: 1px solid transparent;
-        &:hover {
-            border-color: $header-bottom-text;
+.switch-language {
+    li {
+        font-weight: $font-weight-lighter;
+        &.active {
+            font-weight: $font-weight-bold;
         }
+        a {
+            border-bottom: 1px solid transparent;
+            padding: 0;
+            display: block;
+            line-height: 1;
+            margin: 0 10px;
+            span {
+                line-height: 1;
+            }
+            &:hover {
+                border-color: $header-bottom-text;
+            }
+        }
+        &.wpml-ls-current-language {
+            font-weight: bold;
+            &:hover a {
+                border-color: transparent;
+                cursor: default;
+            }
+        }
+        &:first-child {
+            position: relative;
+            &:after {
+                content: "|";
+                position: absolute;
+                right: -1px;
+                top: 0px;
+                line-height: 1;
+            }
+        }
+    }
+    .wpml-ls-legacy-list-horizontal {
+        padding: 0;
+    }
+}
+
+.language_mobile {
+    ul {
+        display: flex;
+        align-items: center;
+    }
+    li span {
+        display: none;
     }
 }
 
@@ -127,6 +164,9 @@
     &:after {
         border-bottom-color: rgba($white, 0.5);
         @include transform(translateY(-4px));
+    }
+    @include media-breakpoint-down(sm) {
+        display: none !important;
     }
 }
 

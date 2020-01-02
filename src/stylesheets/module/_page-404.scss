@@ -1,0 +1,16 @@
+.error404 {
+    color: $white;
+    .register {
+        display: none
+    }
+    .site-main a {
+        color: $white;
+        &:hover {
+            background-color: $white;
+            color: $primary;
+        }
+    }
+    .widget_categories ul li {
+        display: inline-block;
+    }
+}

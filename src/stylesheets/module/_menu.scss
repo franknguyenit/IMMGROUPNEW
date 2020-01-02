@@ -48,8 +48,8 @@
     left: 0;
     z-index: 1;
     display: none;
+    min-width: rem(300);
     li a {
-        text-transform: uppercase;
         white-space: nowrap;
         font-weight: $font-weight-bold;
         padding: $nav-link-padding-y $nav-link-padding-x;
@@ -85,5 +85,11 @@
 @include media-breakpoint-down(sm) {
     #menu li a {
         font-size: 1rem;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    #menu {
+        min-width: 330px;
     }
 }

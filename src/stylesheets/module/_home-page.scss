@@ -55,9 +55,6 @@ body.home {
 }
 
 .service {
-    h1 {
-        font-size: rem(23);
-    }
     &__title {
         margin-bottom: 0;
         font-size: rem(23);
@@ -117,12 +114,12 @@ body.home {
         p {
             position: relative;
             z-index: 2;
-            font-size: rem(14);
         }
     }
 }
 
 .service__select-group .select {
+    max-width: rem(300);
     &-styled {
         position: relative;
         z-index: 2;
@@ -132,7 +129,7 @@ body.home {
         font-weight: lighter;
         font-style: italic;
         display: inline-block;
-        width: 90%;
+        width: 100%;
         cursor: pointer;
         &:after {
             @include icon-font("\33", 2.5rem, 1);

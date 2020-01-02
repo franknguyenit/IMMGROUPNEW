@@ -5,6 +5,12 @@
     .bg-dark-gray {
         background-color: #E8E8E8;
     }
+    .summary {
+        ul {
+            list-style: disc;
+            padding-left: 1rem;
+        }
+    }
     .top-text {
         padding: 1.5rem;
         display: flex;
@@ -22,6 +28,13 @@
             font-weight: normal;
             margin-bottom: 0
         }
+        p {
+            margin-bottom: 0;
+        }
+    }
+    .whatis-content ul {
+        list-style-type: disc;
+        padding-left: 1rem;
     }
     .submenu-linkto {
         padding: 1.5rem 0;
@@ -58,6 +71,7 @@
     .process {
         &__wrap {
             position: relative;
+            margin-bottom: 5rem;
             &:after {
                 position: absolute;
                 content: "";
@@ -121,8 +135,14 @@
             font-weight: 500;
             margin-left: 1rem;
             padding: 0 1rem;
+            ul {
+                list-style: disc;
+            }
             h3 {
                 font-size: 1rem;
+                margin-bottom: 0;
+            }
+            p {
                 margin-bottom: 0;
             }
         }
@@ -157,6 +177,27 @@
             max-width: 3.5rem;
             min-width: 3.5rem;
         }
+        .submenu-linkto {
+            display: block;
+            li {
+                display: block;
+                margin-bottom: .5rem;
+                padding-right: 0;
+                padding-left: 1rem;
+                font-size: rem(14);
+                &:last-child {
+                    margin-bottom: 0;
+                    &:after {
+                        content: "-"
+                    }
+                }
+                &:after {
+                    content: "-";
+                    right: auto;
+                    left: 0
+                }
+            }
+        }
         .process {
             &__wrap:after {
                 left: 0;
@@ -168,6 +209,7 @@
                 margin-left: 0;
                 position: relative;
                 max-width: unset;
+                padding-left: 1rem;
                 .text-primary {
                     margin-bottom: .5rem;
                     font-size: rem(13);
@@ -188,7 +230,8 @@
                 }
             }
             &__des {
-                padding: 0
+                padding: 0;
+                margin-left: 1.5rem;
             }
             &__row {
                 margin-bottom: 0;
@@ -258,6 +301,73 @@
         }
         iframe {
             height: 270px
+        }
+    }
+}
+
+.project-style-01 {
+    &__name {
+        font-size: rem(20);
+        a {
+            color: $secondary;
+            border-bottom: 1px solid transparent;
+            &:hover {
+                border-bottom-color: $secondary;
+            }
+        }
+    }
+    &__wrap {
+        box-shadow: 0 0 14px 4px rgba(0, 0, 0, 0.2);
+        margin-bottom: 1rem;
+    }
+    .image-box::before {
+        padding-top: 70%;
+    }
+    &__sub-des {
+        color: #4C4C4C;
+        padding-bottom: .7rem;
+        border-bottom: 1px solid #4c4c4c;
+        margin-bottom: 1rem;
+        p {
+            margin-bottom: 0;
+        }
+    }
+    &__des {
+        ul {
+            list-style: disc;
+            padding-left: 1rem;
+            li {
+                margin-bottom: .5rem;
+            }
+        }
+    }
+    .action-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .view-more {
+            font-weight: 700;
+            color: $secondary;
+            display: flex;
+            align-items: center;
+            span:before {
+                font-size: 1.6rem;
+            }
+            &:hover {
+                color: lighten($secondary, 15%)
+            }
+        }
+    }
+    @include media-breakpoint-down(md) {
+        .btn__register {
+            font-size: 14px;
+            min-width: inherit;
+            min-height: inherit;
+            padding: 0.3rem 1rem;
+        }
+        &__wrap {
+            padding: 0 !important;
+            box-shadow: none;
         }
     }
 }

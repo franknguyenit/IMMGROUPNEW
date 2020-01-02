@@ -1,19 +1,14 @@
 .breadcrumb {
     margin-bottom: 0;
     font-size: rem(14);
-    &-item {
-        +.breadcrumb-item::before {
-            font-family: 'ElegantIcons';
-        }
-        a {
-            border-bottom: 1px solid transparent;
-        }
-        &:hover a {
+    a {
+        border-bottom: 1px solid transparent;
+        &:hover {
             border-bottom-color: $header-bottom-text;
         }
-        &.active span {
-            color: $gray-500
-        }
+    }
+    span.current {
+        color: $gray-500
     }
 }
 

@@ -75,3 +75,9 @@
         }
     }
 }
+
+@include media-breakpoint-up(lg) {
+    .download-apps__wrap img {
+        max-width: 150px;
+    }
+}

@@ -37,6 +37,14 @@
     }
 }
 
+.wpcf7-validation-errors {
+    display: none !important;
+}
+
+div.wpcf7-mail-sent-ok {
+    color: #000;
+}
+
 @include media-breakpoint-down(sm) {
     .register__title {
         font-size: 1.4rem;
@@ -149,6 +157,9 @@
                 }
             }
         }
+    }
+    .wpcf7-validation-errors {
+        display: none !important;
     }
 }
 

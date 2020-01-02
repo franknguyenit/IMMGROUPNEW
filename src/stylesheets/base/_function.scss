@@ -1,0 +1,17 @@
+$listtype: circle disc square decimal lower-alpha;
+@each $type in $listtype {
+    .list-style-type-#{$type} {
+        list-style-type: #{$type}
+    }
+}
+
+@for $i from 1 through 15 {
+    .service_show#{$i},
+    .service_show#{$i}.active#{$i}.activeshow {
+        display: none;
+    }
+    .service_show#{$i}.active#{$i},
+    .service_show#{$i}.activeshow {
+        display: block;
+    }
+}

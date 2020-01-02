@@ -210,6 +210,15 @@
                 background: transparent;
             }
         }
+        &__top .header__switch-language {
+            display: inline-block;
+            position: absolute;
+            right: 2.5rem;
+            width: 5rem !important;
+            a {
+                color: $header-text;
+            }
+        }
         &__bottom {
             .header__search {
                 display: none
@@ -218,23 +227,6 @@
                 margin-right: 0;
                 display: none;
             }
-        }
-        &__top {
-            .switch-language {
-                background: #fff;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                z-index: 1;
-                height: 45px;
-                padding: 0.7rem 1rem;
-                white-space: nowrap;
-                display: none;
-                border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-            }
-        }
-        #menu {
-            top: calc(100% + 45px)
         }
         &__search {
             position: absolute;
