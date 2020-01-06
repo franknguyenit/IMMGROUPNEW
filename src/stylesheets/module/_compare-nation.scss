@@ -32,6 +32,36 @@
     }
 }
 
+.share-section {
+    a {
+        color: $white;
+        font-size: rem(39);
+    }
+    ul li {
+        vertical-align: middle;
+        &.icon_zalo span {
+            display: inline-block;
+            vertical-align: text-top;
+        }
+        &.icon_copylink {
+            span {
+                display: inline-block;
+                width: rem(40);
+                height: rem(40);
+                background-color: $white;
+                border-radius: 100%;
+                &:before {
+                    font-size: 1.5rem;
+                    vertical-align: middle;
+                }
+            }
+            a {
+                color: $secondary;
+            }
+        }
+    }
+}
+
 @include media-breakpoint-down(lg) {
     .compare__country-name a {
         font-size: rem(20);
