@@ -50,7 +50,6 @@
     display: none;
     min-width: 20rem;
     li a {
-        white-space: nowrap;
         font-weight: $font-weight-bold;
         padding: $nav-link-padding-y $nav-link-padding-x;
         font-size: rem(20);
@@ -90,6 +89,6 @@
 
 @include media-breakpoint-up(md) {
     #menu {
-        min-width: 380px;
+        min-width: 400px;
     }
 }
