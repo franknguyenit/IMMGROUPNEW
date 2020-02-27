@@ -224,6 +224,8 @@
                     left: -4px;
                     top: calc((100% - 10px)/2);
                 }
+            }
+            &__step {
                 span {
                     font-size: rem(13);
                     padding: .2rem 1rem;
@@ -306,6 +308,9 @@
 }
 
 .project-style-01 {
+    &__item {
+        height: 100%;
+    }
     &__name {
         font-size: rem(20);
         a {

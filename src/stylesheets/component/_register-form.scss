@@ -173,3 +173,17 @@ div.wpcf7-mail-sent-ok {
         }
     }
 }
+
+.wpcf7-recaptcha iframe {
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    @include media-breakpoint-only(md) {
+        @include transform(scale(.62))
+    }
+    @include media-breakpoint-only(lg) {
+        @include transform(scale(.81))
+    }
+    @media screen and (max-width: 370px) {
+        @include transform(scale(.85))
+    }
+}
