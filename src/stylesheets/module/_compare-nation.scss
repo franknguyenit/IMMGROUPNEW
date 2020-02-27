@@ -33,9 +33,15 @@
 }
 
 .share-section {
-    a {
-        color: $white;
-        font-size: rem(39);
+    // a {
+    //     color: $white;
+    //     font-size: rem(39);
+    //     &:hover {
+    //         color: #a9a9a9;
+    //     }
+    // }
+    .zalo-share-button {
+        margin-top: 0 !important;
     }
     ul li {
         vertical-align: middle;
@@ -43,20 +49,38 @@
             display: inline-block;
             vertical-align: text-top;
         }
-        &.icon_copylink {
-            span {
-                display: inline-block;
-                width: rem(40);
-                height: rem(40);
-                background-color: $white;
-                border-radius: 100%;
-                &:before {
-                    font-size: 1.5rem;
-                    vertical-align: middle;
-                }
+        span {
+            display: inline-block;
+            width: rem(40);
+            height: rem(40);
+            background-color: $white;
+            border-radius: 100%;
+            &:before {
+                font-size: 1.5rem;
+                vertical-align: middle;
+                line-height: rem(37);
             }
-            a {
-                color: $secondary;
+        }
+        a {
+            color: $secondary;
+            display: inline-block;
+            vertical-align: middle;
+            &:hover {
+                color: #a9a9a9
+            }
+        }
+        &.icon_copylink a {
+            &:active,
+            &:focus {
+                color: #000
+            }
+            @include media-breakpoint-down(sm) {
+                @include hover-focus-active {
+                    color: #fff;
+                    span {
+                        background-color: #a9a9a9;
+                    }
+                }
             }
         }
     }

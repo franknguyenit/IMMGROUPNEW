@@ -190,6 +190,7 @@
     margin: auto;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .image-center {
@@ -232,6 +233,15 @@
 
 .app-group li:hover {
     opacity: .8;
+}
+
+.video-content iframe {
+    width: 100% !important;
+    height: auto;
+    min-height: 400px !important;
+    @include media-breakpoint-down(sm) {
+        min-height: 245px !important;
+    }
 }
 
 video[poster] {
@@ -303,5 +313,14 @@ body.modal-open {
     }
     #questionModal.modal-dialog {
         max-width: 90vw;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .table-sm {
+        overflow-x: scroll;
+        table td {
+            vertical-align: top;
+        }
     }
 }

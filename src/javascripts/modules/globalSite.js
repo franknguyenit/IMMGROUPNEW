@@ -200,11 +200,19 @@ class globalSite {
         })
     }
     static scrollToRegister() {
-        $('.btn__register').click(function() {
-            $('html, body').animate({
-                scrollTop: ($("#register").offset() || { "top": NaN }).top
-            }, 500)
-        });
+        if ($(window).innerWidth() < 767) {
+            $('.btn__register').click(function() {
+                $('html, body').animate({
+                    scrollTop: ($("#register").offset() || { "top": NaN }).top - 100
+                }, 500);
+            });
+        } else {
+            $('.btn__register').click(function() {
+                $('html, body').animate({
+                    scrollTop: ($("#register").offset() || { "top": NaN }).top - 80
+                }, 500);
+            });
+        }
     }
     static videoPlayBtn() {
         $('.video').parent().click(function() {
