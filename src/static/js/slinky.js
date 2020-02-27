@@ -58,7 +58,7 @@ class Slinky {
 
         // create back buttons
         const back = jQuery('<a>')
-            .prop('href', '#!')
+            .prop('href', 'javascript:void(0);')
             .addClass('back')
             .text('Trở về')
             // prepend them to the headers
