@@ -67,6 +67,7 @@ div.wpcf7-mail-sent-ok {
 }
 
 // Register sticky
+.evaluate__sticky,
 .register__sticky {
     position: fixed;
     bottom: 0;
@@ -74,13 +75,13 @@ div.wpcf7-mail-sent-ok {
     background: $white;
     z-index: 150;
     cursor: pointer;
-    &:not(.open) {
-        .register__sticky-btn {
-            span.icon_close {
-                display: none;
-            }
-        }
-    }
+    // &:not(.open) {
+    //     .register__sticky-btn {
+    //         span.icon_close {
+    //             display: none;
+    //         }
+    //     }
+    // }
     &-btn {
         background-color: $primary;
         color: $white;
@@ -90,76 +91,119 @@ div.wpcf7-mail-sent-ok {
         display: block;
         box-shadow: 0 0 5px 0 rgba(1, 3, 4, 0.19);
     }
-    &-form {
-        width: rem(300);
-        position: absolute;
-        right: 3rem;
-        bottom: 3rem;
-        background: $white;
-        border-radius: 10px;
-        box-shadow: 0 0 13px 0px rgba(0, 0, 0, 0.3);
-        &:after {
-            content: "";
-            border-left: 15px solid transparent;
-            border-right: 15px solid transparent;
-            border-top: 15px solid $white;
+    // &-form {
+    //     width: rem(300);
+    //     position: absolute;
+    //     right: 3rem;
+    //     bottom: 3rem;
+    //     background: $white;
+    //     border-radius: 10px;
+    //     box-shadow: 0 0 13px 0px rgba(0, 0, 0, 0.3);
+    //     &:after {
+    //         content: "";
+    //         border-left: 15px solid transparent;
+    //         border-right: 15px solid transparent;
+    //         border-top: 15px solid $white;
+    //         position: absolute;
+    //         right: 2rem;
+    //         bottom: -15px
+    //     }
+    // }
+    // &-title {
+    //     background-color: $primary;
+    //     color: $white;
+    //     font-size: rem(14);
+    //     padding: .8rem 1rem;
+    //     margin-bottom: 0;
+    //     text-align: center;
+    //     border-radius: 10px 10px 0 0;
+    // }
+    // .input-group-panel {
+    //     padding: 1rem;
+    //     .select,
+    //     .control-h {
+    //         height: rem(35);
+    //     }
+    //     .select-styled {
+    //         color: $body-color
+    //     }
+    //     textarea,
+    //     input {
+    //         @include placeholder {
+    //             font-style: italic;
+    //             font-size: rem(14);
+    //         }
+    //     }
+    // }
+    // &.open {
+    //     .register__sticky {
+    //         &-form {
+    //             display: block !important;
+    //         }
+    //         &-btn {
+    //             h5 {
+    //                 opacity: 0;
+    //             }
+    //             span {
+    //                 opacity: 1;
+    //                 position: absolute;
+    //                 width: 100%;
+    //                 height: 100%;
+    //                 display: flex;
+    //                 top: 0;
+    //                 left: 0;
+    //                 justify-content: center;
+    //                 align-items: center;
+    //                 font-size: 1.8rem;
+    //             }
+    //         }
+    //     }
+    // }
+    // .wpcf7-validation-errors {
+    //     display: none !important;
+    // }
+}
+
+.evaluate {
+    &__sticky {
+        right: rem(160);
+        &-btn {
+            background-color: $secondary;
+        }
+    }
+    &__modal {
+        color: $black;
+        &-group a {
+            position: relative;
+            &:after {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $black;
+                content: '';
+            }
+        }
+        a {
+            color: $black;
+            @include hover-focus-active {
+                color: $primary;
+                &:after {
+                    background-color: $primary;
+                }
+            }
+        }
+        &-header .close {
             position: absolute;
-            right: 2rem;
-            bottom: -15px
+            right: .5rem;
+            top: 0rem
         }
-    }
-    &-title {
-        background-color: $primary;
-        color: $white;
-        font-size: rem(14);
-        padding: .8rem 1rem;
-        margin-bottom: 0;
-        text-align: center;
-        border-radius: 10px 10px 0 0;
-    }
-    .input-group-panel {
-        padding: 1rem;
-        .select,
-        .control-h {
-            height: rem(35);
+        &-footer button {
+            min-width: unset;
+            min-height: unset;
+            padding: 0.2rem 1.3rem;
         }
-        .select-styled {
-            color: $body-color
-        }
-        textarea,
-        input {
-            @include placeholder {
-                font-style: italic;
-                font-size: rem(14);
-            }
-        }
-    }
-    &.open {
-        .register__sticky {
-            &-form {
-                display: block !important;
-            }
-            &-btn {
-                h5 {
-                    opacity: 0;
-                }
-                span {
-                    opacity: 1;
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    top: 0;
-                    left: 0;
-                    justify-content: center;
-                    align-items: center;
-                    font-size: 1.8rem;
-                }
-            }
-        }
-    }
-    .wpcf7-validation-errors {
-        display: none !important;
     }
 }
 
@@ -171,6 +215,16 @@ div.wpcf7-mail-sent-ok {
         &__sticky {
             right: 0;
         }
+    }
+    .register__sticky,
+    .evaluate__sticky {
+        &-btn h5 {
+            font-size: 12px;
+            white-space: nowrap;
+        }
+    }
+    .evaluate__sticky {
+        right: 7.5rem;
     }
 }
 
