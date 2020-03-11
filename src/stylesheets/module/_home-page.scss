@@ -11,6 +11,10 @@ body.home {
             padding: 0
         }
     }
+    .line-title,
+    .white-line-title {
+        font-size: rem(30);
+    }
 }
 
 .slideshow {
@@ -188,7 +192,8 @@ body.home {
         font-size: 2rem;
     }
 }
-.link-as{
+
+.link-as {
     position: absolute;
     top: 0;
     left: 0;
