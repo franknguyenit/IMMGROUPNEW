@@ -1,0 +1,38 @@
+.page-template-content-home-EN {
+    background-color: white !important;
+    .service__name h4 {
+        margin-bottom: 0 !important;
+    }
+}
+
+.service {
+    &__name {
+        h4,
+        h5 {
+            font-size: rem(20);
+            line-height: rem(28);
+        }
+    }
+    &__group-name {
+        font-size: rem(23);
+    }
+    &__group {
+        width: 100%;
+        @include media-breakpoint-up(md) {
+            width: 75%;
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .service__group-name {
+        font-size: 1.2rem;
+    }
+    .service__name {
+        h4,
+        h5 {
+            font-size: 1rem;
+            line-height: 1.4rem
+        }
+    }
+}

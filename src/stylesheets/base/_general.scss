@@ -76,6 +76,27 @@
     }
 }
 
+.line-title-w-number-no-line {
+    @extend .line-title-w-number;
+    align-items: baseline;
+    font-family: $font-family-base;
+    margin-bottom: 1rem;
+    .title__text {
+        font-size: 1rem;
+        border-bottom: 0;
+        padding: 0;
+        line-height: 1rem;
+        font-weight: bold;
+        &:after {
+            display: none;
+        }
+    }
+    .title__number {
+        font-size: rem(34);
+        font-family: 'commerceB', sans-serif;
+    }
+}
+
 .white-line-title {
     @extend .line-title;
     border-bottom: 0;
@@ -354,6 +375,42 @@ body.modal-open {
     .box__icon {
         max-width: 5rem;
         min-width: 5rem;
+    }
+}
+
+.link-icon {
+    display: inline-block;
+    position: relative;
+    i {
+        font-size: 2rem;
+        position: absolute;
+        right: -2rem;
+        top: -5px;
+    }
+}
+
+.grid-list .border-dark {
+    border-right: 0;
+    @include media-breakpoint-up(xl) {
+        &:last-child,
+        &:nth-child(4n) {
+            border-right: 1px solid;
+        }
+    }
+    @include media-breakpoint-only(lg) {
+        &:last-child,
+        &:nth-child(3n) {
+            border-right: 1px solid;
+        }
+    }
+    @include media-breakpoint-only(md) {
+        &:last-child,
+        &:nth-child(2n) {
+            border-right: 1px solid;
+        }
+    }
+    @include media-breakpoint-down(sm) {
+        border-right: 1px solid;
     }
 }
 

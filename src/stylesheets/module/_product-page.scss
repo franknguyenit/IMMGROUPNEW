@@ -26,10 +26,15 @@
         h3 {
             font-size: 1rem;
             font-weight: normal;
-            margin-bottom: 0
+            margin-bottom: 0;
+            margin-top: 2px;
         }
         p {
             margin-bottom: 0;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 1rem;
         }
     }
     .whatis-content ul {

@@ -66,6 +66,11 @@
     }
 }
 
+.content-ul ul {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+}
+
 @include media-breakpoint-down(xs) {
     .d-flex-col {
         flex-direction: column;
