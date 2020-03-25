@@ -72,12 +72,11 @@
             color: $menu-color-hover;
         }
     }
-    .next::after,
-    .back::before {
+    .next::after{
         @include icon-font('\35', 1.5rem, 1rem);
     }
     .back::before {
-        transform: scaleX(-1);
+        @include icon-font('\4a', 1.5rem, 1rem);
     }
 }
 
