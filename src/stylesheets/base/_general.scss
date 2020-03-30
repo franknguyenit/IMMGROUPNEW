@@ -302,9 +302,18 @@
 .video-content iframe {
     width: 100% !important;
     height: auto;
-    min-height: 400px !important;
+    min-height: 500px !important;
+    @include media-breakpoint-down(md) {
+        min-height: 365px !important;
+    }
     @include media-breakpoint-down(sm) {
-        min-height: 245px !important;
+        min-height: 190px !important;
+    }
+}
+.video-youtube{
+    min-height: 300px;
+    @include media-breakpoint-down(sm) {
+        min-height: 190px !important;
     }
 }
 
