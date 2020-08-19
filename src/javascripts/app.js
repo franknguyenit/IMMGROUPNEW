@@ -14,12 +14,11 @@ globalSite.openMenu();
 globalSite.SearchBoxEffect();
 globalSite.selectCustom();
 globalSite.scrollTop();
-globalSite.showStickyRegister();
+//globalSite.showStickyRegister();
 globalSite.compareSameHeight();
 globalSite.blogDetailsCustom();
-globalSite.customOwlSlide();
+//globalSite.customOwlSlide();
 globalSite.scrollToRegister();
-globalSite.videoPlayBtn();
 globalSite.linkTo();
 
 for (var i = 0; i < moduleElements.length; i++) {

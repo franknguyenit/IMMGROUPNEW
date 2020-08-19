@@ -57,8 +57,222 @@
     }
 }
 
+
 @include media-breakpoint-down(xs) {
     .select-styled {
         font-size: rem(14);
     }
 }
+
+
+  .stepform fieldset {
+    background: white;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 4rem 2rem;
+    position: relative;
+    }
+    .stepform fieldset:not(:first-of-type) {
+      display: none; }
+    
+      .stepform fieldset .form-control:hover, .stepform fieldset .form-control:active, .stepform fieldset .form-control:focus {
+        border-color: #ad1f23; }
+      .stepform fieldset .form-control:focus {
+        box-shadow: none;
+        outline: none; }
+    .stepform fieldset .form-group {
+      text-align: left;
+      display: flex;
+      flex-direction: column; }
+      .stepform fieldset .form-group label.error {
+        order: 3;
+        border: 0 !important;
+        color: red;
+        font-weight: normal; }
+      .stepform fieldset .form-group label {
+        font-weight: 500; }
+      .stepform fieldset .form-group .check-content {
+        font-weight: normal; }
+    .stepform fieldset input:focus {
+      box-shadow: none;
+      outline: none; }
+  .stepform .action-button {
+    background: #ad1f23;
+    font-weight: bold;
+    color: white;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    line-height: 1;
+    padding: .7rem 1rem; }
+  .stepform__title {
+    font-weight: normal; }
+  .stepform__subtitle {
+    font-weight: normal;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px; }
+  .stepform .sub-drop {
+    display: none; }
+
+#progressbar {
+  margin-bottom: 30px;
+  overflow: hidden;
+  counter-reset: step;
+  padding: 0;
+  height: 40rem; }
+  #progressbar li {
+    list-style-type: none;
+    float: left;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: calc(100%/8);
+    text-align: left;
+    padding-left: 2.2rem; }
+    #progressbar li:before {
+      content: counter(step);
+      counter-increment: step;
+      width: 1.7rem;
+      line-height: 1.7rem;
+      display: block;
+      color: #333;
+      background: #ddd;
+      border-radius: 3px;
+      margin: 0 auto .7rem auto;
+      position: absolute;
+      left: 0;
+      text-align: center; }
+    #progressbar li:after {
+      content: '';
+      height: 100%;
+      width: 2px;
+      background: #ddd;
+      position: absolute;
+      left: 12px;
+      top: .8rem;
+      z-index: -1; }
+    #progressbar li:last-child:after {
+      display: none; }
+    #progressbar li.active:before, #progressbar li.active:after {
+      background-color: #ad1f23;
+      color: #fff; }
+
+.check-content {
+  display: block;
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: .7rem;
+  cursor: pointer;
+  font-size: 1rem; }
+  .check-content input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer; }
+    .check-content input:checked ~ .checkmark {
+      background-color: #ad1f23; }
+      .check-content input:checked ~ .checkmark:after {
+        opacity: 1; }
+  .check-content .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.4rem;
+    width: 1.4rem;
+    background-color: #eee;
+    transition: 0.4s ease; }
+    .check-content .checkmark:after {
+      content: "";
+      position: absolute;
+      opacity: 0;
+      transition: 0.4s ease; }
+    .check-content .checkmark.radio {
+      border-radius: 50%; }
+      .check-content .checkmark.radio:after {
+        width: .5rem;
+        height: .5rem;
+        top: calc((100% - 8px)/2);
+        left: calc((100% - 8px)/2);
+        border-radius: 50%;
+        background: white; }
+
+.border-left-2 {
+  border-left: 2px solid #ad1f23; }
+.stepform fieldset textarea.form-control {
+    height: auto;
+}
+@media screen and (max-width: 767px) {
+    .stepform {
+        margin: 3rem auto;
+        width: 100%; 
+        height:auto;
+    }
+    .stepform fieldset {
+      width: 100%;
+      padding: 1rem;
+      box-shadow: none; }
+    .stepform__title {
+      font-size: 1.5rem; }
+
+  #progressbar {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    overflow: inherit; 
+	}
+    #progressbar li {
+    font-size: 0;
+	width: auto; 
+	}
+	#progressbar li:before {
+    font-size: 14px; 
+	}
+	#progressbar li:after{
+	left: 27px;
+	height: 2px;
+    width: 100%;
+	}
+}
+.content-inner {
+    width: 90%;
+    max-width: 600px;
+    padding: 5rem 3rem;
+    background: rgba(#ad1f23, 0.7);
+    text-align: center;
+    border: 5px solid #fff;
+    box-shadow: 0 0 0px 3px #ad1f23;
+}
+
+@media screen and (max-width: 580px) {
+  .content-inner {
+    padding: 2rem; }
+    .content-inner h1 {
+      font-size: 1.6rem; } }
+
+.stepform .action-button.disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+.spinner-border {
+    width: 1rem !important;
+    height: 1rem !important;    
+}
+.scrollbar {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#style_3::-webkit-scrollbar-track {
+    -webkit-box-shadow: transparent;
+    background-color: transparent;
+}
+
+#style_3::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+
+#style_3::-webkit-scrollbar-thumb {
+    background-color: #ad1f23;
+}
+  /*# sourceMappingURL=style.css.map */

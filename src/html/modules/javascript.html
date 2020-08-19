@@ -108,9 +108,8 @@
     $script([
         'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'
     ], 'vendor', function() {
-        $script(['js/slinky.js', 'javascripts/app.js'], 'myScript', function() {
+        $script(['js/slinky.js','js/jquery.validate.js','js/jquery.js', 'javascripts/app.js'], 'myScript', function() {
             $(function() {
-                $(".owl-carousel").owlCarousel();
                 window.slinky = $('#menu').slinky();
             });
         });

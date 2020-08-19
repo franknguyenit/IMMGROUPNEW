@@ -2,7 +2,7 @@ import $ from 'jquery';
 export default class customForm {
 	constructor(element) {
 		this.element = $(element);
-		this.customForm();
+		//this.customForm();
 	}
 
 	customForm(){

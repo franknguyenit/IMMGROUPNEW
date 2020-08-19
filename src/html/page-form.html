@@ -1,0 +1,167 @@
+{% extends 'layouts/application.html' %}{% block bodyClass %}class="visa-kinh-doanh-E-2"{% endblock %} {% block header %} {% include "modules/header.html" %} {% endblock %} {% block content %}
+<!-- Breadcrumb  -->
+{% include "modules/component/breadcrumb.html" %}
+<!-- End breadcrumb  -->
+<div class="entry-content">
+    <form class="eventform stepform scrollTo" id="stepForm">
+					
+        <div id="form_show" class="row py-md-5"> 
+            <div class="col-md-8 offset-md-2  ">
+                <h2 class="title h4 text-uppercase mb-4 text-center">ĐĂNG KÝ THAM DỰ TỌA ĐÀM TRỰC TUYẾN</h2>
+                <p><i>Để đăng ký tham dự, chị vui lòng điền thông tin đăng ký. Chuyên viên tư vấn của IMM Group sẽ liên hệ sắp xếp lịch và gửi hướng dẫn chị cách thức tham dự tọa đàm.</i></p>
+                <fieldset id="step_1" >
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="mb-1">Họ và tên</label>
+                                <input id="txtname" class="form-control register__input required" name="name" type="text" autocomplete="off">					
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="mb-1">Email</label>
+                                <input id="txtemail" class="form-control register__input required" type="text" name="email" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="mb-1">Số điện thoại</label>
+                                <input id="txtphone" class="form-control register__input required" type="text" name="phone" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="mb-1">Giới tính</label>
+                                <select id="gender" runat="server" class="form-control">
+                                    <option value="">Lựa chọn giới tính</option>
+                                    <option value="Nam">Nam</option>
+                                    <option value="Nữ">Nữ</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="mb-1">Tuổi</label>
+                                <input id="txtold" class="form-control register__input required number" type="text" name="old" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group" id="areatext">
+                                <label class="mb-1">Địa điểm anh chị đang ở</label>
+                                <select id="areamy" runat="server" class="form-control">
+                                    <option value="">Lựa chọn địa điểm</option>
+                                    <option value="Phía Bắc">Phía Bắc</option>
+                                    <option value="Phía Nam">Phía Nam</option>
+                                    <option value="Khác">Khác</option>
+                                </select>
+                            </div>
+                            <div class="form-group d-none" id="showarea">
+                                <label class="mb-1">Địa điểm khác</label>
+                                <input id="txtkhuvuckhac" class="form-control register__input" type="text" name="khuvuckhac" autocomplete="off">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label class="mb-1">Có yêu cầu khác cần tư vấn</label>
+                                <input id="txtnhucaukhac" class="form-control register__input" type="text" name="nhucaukhac" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <input type="button" name="next" class="next action-button" value="Kế tiếp" />
+                    
+                </fieldset>		
+                <fieldset id="step_2" class="step-end">
+                    <h4>Thông tin để thẩm định hồ sơ</h4>
+                    <div class="form-group text-left">
+                        <label class="mb-1">1. Anh/chị đã từng sang Bồ Đào Nha chưa? </label>
+                        <label class="check-content">
+                            Có
+                            <input id="tungsangbdn1" class="" type="radio" name="tungsangbdn" value="yes" checked />
+                            <span class="checkmark radio"></span>
+                        </label>
+                        <label class="check-content">
+                            Không
+                            <input  id="tungsangbdn2" class="" type="radio" name="tungsangbdn" value="no" />
+                            <span class="checkmark radio"></span>
+                        </label>
+                        
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-1">2.	Thời gian anh/chị dự định đầu tư 350.000 EUR (~8,9 tỷ VNĐ) lấy Golden Visa Bồ Đào Nha</label>
+                        <input id="txttime" class="form-control register__input required" type="text" name="time" autocomplete="off">
+                    </div>
+
+                    <div class="form-group text-left">
+                        <label class="mb-1">3.	Anh/ chị có cần sang Bồ Đào Nha để xem bất động sản hay không? </label>
+                        <label class="check-content">
+                            Có
+                            <input id="cansangbdn1" class="" type="radio" name="cansangbdn" value="yes" checked />
+                            <span class="checkmark radio"></span>
+                        </label>
+                        <label class="check-content">
+                            Không
+                            <input  id="cansangbdn2" class="" type="radio" name="cansangbdn" value="no" />
+                            <span class="checkmark radio"></span>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-1">4.	Tuổi của người đứng đơn bộ hồ sơ lấy Golden Visa Bồ Đào Nha </label>
+                        <input id="oldusermain" class="form-control register__input required" type="text" name="oldusermain" autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="mb-1">5.	Số thành viên trong gia đình đi kèm hồ sơ lấy Golden Visa Bồ Đào Nha</label>
+                        <input id="numberuser" class="form-control register__input required" type="text" name="numberuser" autocomplete="off">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="mb-1">6.	Độ tuổi người phụ thuộc đi kèm hồ sơ lấy Golden Visa Bồ Đào Nha</label>
+                        <input id="olduserfollow" class="form-control register__input required" type="text" name="olduserfollow" autocomplete="off">
+                    </div>
+
+                    <div class="form-group text-left">
+                        <label class="mb-1">7.	Mục đích đầu tư lấy Golden Visa Bồ Đào Nha</label>
+                        <label class="check-content">
+                            Đầu tư lấy quyền cư trú và quốc tich Bồ Đào Nha 
+                            <input id="purpose1" class="shareCompany" type="radio" name="purpose" value="Đầu tư lấy quyền cư trú và quốc tich Bồ Đào Nha" checked />
+                            <span class="checkmark radio"></span>
+                        </label>
+                        <label class="check-content">
+                            Đầu tư lấy quyền sinh sống, học tập, và làm việc tại Liên minh châu Âu
+                            <input  id="purpose2" class="shareCompany" type="radio" name="purpose" value="Đầu tư lấy quyền sinh sống, học tập, và làm việc tại Liên minh châu Âu" />
+                            <span class="checkmark radio"></span>
+                        </label>
+                        <label class="check-content">
+                            Đầu tư bất động sản sinh lời 
+                            <input  id="purpose4" class="shareCompany" type="radio" name="purpose" value="Đầu tư bất động sản sinh lời" />
+                            <span class="checkmark radio"></span>
+                        </label>
+                        <label class="check-content ">
+                            Khác
+                            <input  id="purpose3" class="shareCompany" type="radio" name="purpose" value="yes" />
+                            <span class="checkmark radio"></span>
+                        </label>
+                    </div>
+                    <div class="form-group d-none" id="show1">
+                        <input id="txtother" class="form-control register__input required" type="text" name="other" autocomplete="off">
+                    </div>
+
+                    <input type="button" name="previous" class="previous action-button" value="Quay lại" />
+                    <input type="button" value="Hoàn tất đăng ký" data-area="bdn" class="next action-button register__btn">
+                </fieldset>	  
+            </div>
+        </div>
+   </form>
+    
+</div>
+
+
+<!-- end blog  -->
+{% include "modules/component/register-footer.html" %}
+<!-- end register -->
+{% endblock %}

@@ -171,7 +171,7 @@ class globalSite {
             }
         });
     }
-    static customOwlSlide() {
+    /*static customOwlSlide() {
         $('.project__slider-img').owlCarousel({
             margin: 15,
             items: 2,
@@ -198,7 +198,7 @@ class globalSite {
                 },
             }
         })
-    }
+    }*/
     static scrollToRegister() {
         if ($(window).innerWidth() < 767) {
             $('.btn__register').click(function() {
