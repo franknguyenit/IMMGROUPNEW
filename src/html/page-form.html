@@ -2,15 +2,13 @@
 <!-- Breadcrumb  -->
 {% include "modules/component/breadcrumb.html" %}
 <!-- End breadcrumb  -->
-<div class="entry-content">
+<div class="entry-content container">
     <form class="eventform stepform scrollTo" id="stepForm">
-					
         <div id="form_show" class="row py-md-5"> 
-            <div class="col-md-8 offset-md-2  ">
-                <h2 class="title h4 text-uppercase mb-4 text-center">ĐĂNG KÝ THAM DỰ TỌA ĐÀM TRỰC TUYẾN</h2>
-                <p><i>Để đăng ký tham dự, chị vui lòng điền thông tin đăng ký. Chuyên viên tư vấn của IMM Group sẽ liên hệ sắp xếp lịch và gửi hướng dẫn chị cách thức tham dự tọa đàm.</i></p>
+            <div class="col-md-8 offset-md-2 "> 
+                <h2 class="title h4 text-uppercase mb-4 text-center">ĐĂNG KÝ THAM DỰ TỌA ĐÀM TRỰC TUYẾN</h4>
+                <p><i>Chuyên viên tư vấn của IMM Group sẽ liên hệ xác nhận thông tin và gửi hướng dẫn cách thức tham dự tọa đàm.</i></p>
                 <fieldset id="step_1" >
-                    
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -21,18 +19,18 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="mb-1">Email</label>
-                                <input id="txtemail" class="form-control register__input required" type="text" name="email" autocomplete="off">
+                                <input id="txtemail" class="form-control register__input required email" type="text" name="email" autocomplete="off">
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label class="mb-1">Số điện thoại</label>
-                                <input id="txtphone" class="form-control register__input required" type="text" name="phone" autocomplete="off">
+                                <input id="txtphone" class="form-control register__input required number" type="text" name="phone" autocomplete="off">
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="form-group">
                                 <label class="mb-1">Giới tính</label>
                                 <select id="gender" runat="server" class="form-control">
@@ -40,12 +38,6 @@
                                     <option value="Nam">Nam</option>
                                     <option value="Nữ">Nữ</option>
                                 </select>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-group">
-                                <label class="mb-1">Tuổi</label>
-                                <input id="txtold" class="form-control register__input required number" type="text" name="old" autocomplete="off">
                             </div>
                         </div>
                     </div>
@@ -73,86 +65,103 @@
                         </div>
                     </div>
                     <input type="button" name="next" class="next action-button" value="Kế tiếp" />
-                    
                 </fieldset>		
                 <fieldset id="step_2" class="step-end">
-                    <h4>Thông tin để thẩm định hồ sơ</h4>
+                    <h4>Thông tin để thẩm định hồ sơ visa định cư Mỹ</h4>
                     <div class="form-group text-left">
-                        <label class="mb-1">1. Anh/chị đã từng sang Bồ Đào Nha chưa? </label>
+                    <label class="mb-1">1. Phương án mà anh chị sẵn sàng đầu tư ?</label>
+                    <label class="check-content">
+                        Đầu tư 900.000 USD (~21 tỷ VND) để lấy visa định cư Mỹ EB-5 
+                        <input id="sansangdautu1" class="" type="radio" name="sansangdautu" value="Đầu tư 900.000 USD (~21 tỷ VND) để lấy visa định cư Mỹ EB-5 " checked />
+                        <span class="checkmark radio"></span>
+                    </label>
+                    <label class="check-content">
+                        Đầu tư 220.000 USD (~5,1 tỷ VND) lấy quốc tịch Grenada và đầu tư thêm tối thiểu từ 200.000 USD (~4,6 tỷ VND) lấy visa Mỹ E-2
+                        <input  id="sansangdautu2" class="" type="radio" name="sansangdautu" value="Đầu tư 220.000 USD (~5,1 tỷ VND) lấy quốc tịch Grenada và đầu tư thêm tối thiểu từ 200.000 USD (~4,6 tỷ VND) lấy visa Mỹ E-2" />
+                        <span class="checkmark radio"></span>
+                    </label>
+                    </div>
+                    <div class="form-group text-left">
+                        <label class="mb-1">2. Thời gian anh chị có thể chờ để sang Mỹ ?</label>
+                        <label class="check-content">
+                            Khoảng 5 năm (visa định cư Mỹ EB-5)
+                            <input id="thoigian1" class="" type="radio" name="thoigian" value="Khoảng 5 năm (visa định cư Mỹ EB-5)" checked />
+                            <span class="checkmark radio"></span>
+                        </label>
+                        <label class="check-content">
+                            Khoảng 1 năm (visa Mỹ E-2)
+                            <input  id="thoigian2" class="" type="radio" name="thoigian" value="Khoảng 1 năm (visa Mỹ E-2)" />
+                            <span class="checkmark radio"></span>
+                        </label>
+                    </div>
+                    <div class="form-group text-left">
+                        <label class="mb-1">3. Mục đích chính khi đầu tư ? </label>
+                        <label class="check-content">
+                            Sang Mỹ nhanh chóng cho con đi học
+                            <input id="mucdichdautu1" class="" type="radio" name="mucdichdautu" value="Sang Mỹ nhanh chóng cho con đi học" checked />
+                            <span class="checkmark radio"></span>
+                        </label>
+                        <label class="check-content">
+                            Cho cả gia đình định cư Mỹ lâu dài
+                            <input  id="mucdichdautu2" class="" type="radio" name="mucdichdautu" value="Cho cả gia đình định cư Mỹ lâu dài" />
+                            <span class="checkmark radio"></span>
+                        </label>
+                        <label class="check-content">
+                            Lấy thêm visa Mỹ để thuận tiện đi lại kinh doanh giữa Mỹ và Việt Nam
+                            <input  id="mucdichdautu3" class="" type="radio" name="mucdichdautu" value="Lấy thêm visa Mỹ để thuận tiện đi lại kinh doanh giữa Mỹ và Việt Nam" />
+                            <span class="checkmark radio"></span>
+                        </label>
+                        <label class="check-content">
+                            Khác 
+                            <input  id="mucdichdautu4" class="" type="radio" name="mucdichdautu" value="Khác" />
+                            <span class="checkmark radio"></span>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-1">4. Anh chị từng qua Mỹ chưa ?</label>
                         <label class="check-content">
                             Có
-                            <input id="tungsangbdn1" class="" type="radio" name="tungsangbdn" value="yes" checked />
+                            <input id="tungquamy1" class="" type="radio" name="tungquamy" value="yes" checked />
                             <span class="checkmark radio"></span>
                         </label>
                         <label class="check-content">
                             Không
-                            <input  id="tungsangbdn2" class="" type="radio" name="tungsangbdn" value="no" />
+                            <input  id="tungquamy2" class="" type="radio" name="tungquamy" value="no" />
                             <span class="checkmark radio"></span>
                         </label>
-                        
                     </div>
                     <div class="form-group">
-                        <label class="mb-1">2.	Thời gian anh/chị dự định đầu tư 350.000 EUR (~8,9 tỷ VNĐ) lấy Golden Visa Bồ Đào Nha</label>
-                        <input id="txttime" class="form-control register__input required" type="text" name="time" autocomplete="off">
-                    </div>
-
-                    <div class="form-group text-left">
-                        <label class="mb-1">3.	Anh/ chị có cần sang Bồ Đào Nha để xem bất động sản hay không? </label>
+                        <label class="mb-1">5. Có người thân ở Mỹ hay không ?</label>
                         <label class="check-content">
                             Có
-                            <input id="cansangbdn1" class="" type="radio" name="cansangbdn" value="yes" checked />
+                            <input id="nguoithan1" class="" type="radio" name="nguoithan" value="yes" checked />
                             <span class="checkmark radio"></span>
                         </label>
                         <label class="check-content">
                             Không
-                            <input  id="cansangbdn2" class="" type="radio" name="cansangbdn" value="no" />
+                            <input  id="nguoithan2" class="" type="radio" name="nguoithan" value="no" />
                             <span class="checkmark radio"></span>
                         </label>
                     </div>
                     <div class="form-group">
-                        <label class="mb-1">4.	Tuổi của người đứng đơn bộ hồ sơ lấy Golden Visa Bồ Đào Nha </label>
-                        <input id="oldusermain" class="form-control register__input required" type="text" name="oldusermain" autocomplete="off">
+                        <label class="mb-1">6. Trước đây đã từng nộp hồ sơ xin visa định cư Mỹ hay không ?</label>
+                        <label class="check-content">
+                            Có
+                            <input id="tungnoihoso1" class="" type="radio" name="tungnoihoso" value="yes" checked />
+                            <span class="checkmark radio"></span>
+                        </label>
+                        <label class="check-content">
+                            Không
+                            <input  id="tungnoihoso2" class="" type="radio" name="tungnoihoso" value="no" />
+                            <span class="checkmark radio"></span>
+                        </label>
                     </div>
-
                     <div class="form-group">
-                        <label class="mb-1">5.	Số thành viên trong gia đình đi kèm hồ sơ lấy Golden Visa Bồ Đào Nha</label>
-                        <input id="numberuser" class="form-control register__input required" type="text" name="numberuser" autocomplete="off">
+                        <label class="mb-1">7.	Số thành viên đi kèm hồ sơ ? </label>
+                        <input id="thanhviendikem" class="form-control register__input required" type="text" name="thanhviendikem" autocomplete="off">
                     </div>
-
-                    <div class="form-group">
-                        <label class="mb-1">6.	Độ tuổi người phụ thuộc đi kèm hồ sơ lấy Golden Visa Bồ Đào Nha</label>
-                        <input id="olduserfollow" class="form-control register__input required" type="text" name="olduserfollow" autocomplete="off">
-                    </div>
-
-                    <div class="form-group text-left">
-                        <label class="mb-1">7.	Mục đích đầu tư lấy Golden Visa Bồ Đào Nha</label>
-                        <label class="check-content">
-                            Đầu tư lấy quyền cư trú và quốc tich Bồ Đào Nha 
-                            <input id="purpose1" class="shareCompany" type="radio" name="purpose" value="Đầu tư lấy quyền cư trú và quốc tich Bồ Đào Nha" checked />
-                            <span class="checkmark radio"></span>
-                        </label>
-                        <label class="check-content">
-                            Đầu tư lấy quyền sinh sống, học tập, và làm việc tại Liên minh châu Âu
-                            <input  id="purpose2" class="shareCompany" type="radio" name="purpose" value="Đầu tư lấy quyền sinh sống, học tập, và làm việc tại Liên minh châu Âu" />
-                            <span class="checkmark radio"></span>
-                        </label>
-                        <label class="check-content">
-                            Đầu tư bất động sản sinh lời 
-                            <input  id="purpose4" class="shareCompany" type="radio" name="purpose" value="Đầu tư bất động sản sinh lời" />
-                            <span class="checkmark radio"></span>
-                        </label>
-                        <label class="check-content ">
-                            Khác
-                            <input  id="purpose3" class="shareCompany" type="radio" name="purpose" value="yes" />
-                            <span class="checkmark radio"></span>
-                        </label>
-                    </div>
-                    <div class="form-group d-none" id="show1">
-                        <input id="txtother" class="form-control register__input required" type="text" name="other" autocomplete="off">
-                    </div>
-
                     <input type="button" name="previous" class="previous action-button" value="Quay lại" />
-                    <input type="button" value="Hoàn tất đăng ký" data-area="bdn" class="next action-button register__btn">
+                    <input type="button" value="Hoàn tất đăng ký" data-area="92020my" class="next action-button register__btn">
                 </fieldset>	  
             </div>
         </div>
