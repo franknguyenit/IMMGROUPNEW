@@ -7,7 +7,7 @@
         <div id="form_show" class="row py-md-5"> 
             <div class="col-md-8 offset-md-2 "> 
                 <h2 class="title h4 text-uppercase mb-4 text-center">ĐĂNG KÝ THAM DỰ TỌA ĐÀM TRỰC TUYẾN</h4>
-                <p><i>Chuyên viên tư vấn của IMM Group sẽ liên hệ xác nhận thông tin và gửi hướng dẫn cách thức tham dự tọa đàm.</i></p>
+                <p><i>Anh chị vui lòng điền các thông tin bên dưới.<br>Chuyên viên tư vấn của IMM Group sẽ liên hệ xác nhận thông tin và gửi hướng dẫn cách thức tham dự tọa đàm.</i></p>
                 <fieldset id="step_1" >
                     <div class="row">
                         <div class="col-md-6">
@@ -67,101 +67,89 @@
                     <input type="button" name="next" class="next action-button" value="Kế tiếp" />
                 </fieldset>		
                 <fieldset id="step_2" class="step-end">
-                    <h4>Thông tin để thẩm định hồ sơ visa định cư Mỹ</h4>
+                    <h4>Thông tin để thẩm định hồ sơ</h4>
                     <div class="form-group text-left">
-                    <label class="mb-1">1. Phương án mà anh chị sẵn sàng đầu tư ?</label>
-                    <label class="check-content">
-                        Đầu tư 900.000 USD (~21 tỷ VND) để lấy visa định cư Mỹ EB-5 
-                        <input id="sansangdautu1" class="" type="radio" name="sansangdautu" value="Đầu tư 900.000 USD (~21 tỷ VND) để lấy visa định cư Mỹ EB-5 " checked />
-                        <span class="checkmark radio"></span>
-                    </label>
-                    <label class="check-content">
-                        Đầu tư 220.000 USD (~5,1 tỷ VND) lấy quốc tịch Grenada và đầu tư thêm tối thiểu từ 200.000 USD (~4,6 tỷ VND) lấy visa Mỹ E-2
-                        <input  id="sansangdautu2" class="" type="radio" name="sansangdautu" value="Đầu tư 220.000 USD (~5,1 tỷ VND) lấy quốc tịch Grenada và đầu tư thêm tối thiểu từ 200.000 USD (~4,6 tỷ VND) lấy visa Mỹ E-2" />
-                        <span class="checkmark radio"></span>
-                    </label>
+                        <label class="mb-1">1. Giá trị căn nhà anh/chị dự định sẽ mua?</label>
+                        <input id="giatrinhasemua" class="form-control register__input required" type="text" name="giatrinhasemua" autocomplete="off">
                     </div>
                     <div class="form-group text-left">
-                        <label class="mb-1">2. Thời gian anh chị có thể chờ để sang Mỹ ?</label>
+                        <label class="mb-1">2. Mục đích chính khi mua nhà</label>
                         <label class="check-content">
-                            Khoảng 5 năm (visa định cư Mỹ EB-5)
-                            <input id="thoigian1" class="" type="radio" name="thoigian" value="Khoảng 5 năm (visa định cư Mỹ EB-5)" checked />
+                            Định cư tại Úc
+                            <input id="mucdichmuanha1" class="" type="radio" name="mucdichmuanha" value="Định cư tại Úc" checked />
                             <span class="checkmark radio"></span>
                         </label>
                         <label class="check-content">
-                            Khoảng 1 năm (visa Mỹ E-2)
-                            <input  id="thoigian2" class="" type="radio" name="thoigian" value="Khoảng 1 năm (visa Mỹ E-2)" />
+                            Cho con ở khi đi du học
+                            <input  id="mucdichmuanha2" class="" type="radio" name="mucdichmuanha" value="Cho con ở khi đi du học" />
+                            <span class="checkmark radio"></span>
+                        </label>
+                        <label class="check-content">
+                            Đầu tư sinh lời 
+                            <input  id="mucdichmuanha3" class="" type="radio" name="mucdichmuanha" value="Đầu tư sinh lời " />
+                            <span class="checkmark radio"></span>
+                        </label>
+                        <label class="check-content">
+                            Khác
+                            <input  id="mucdichmuanha4" class="" type="radio" name="mucdichmuanha" value="Khác" />
                             <span class="checkmark radio"></span>
                         </label>
                     </div>
                     <div class="form-group text-left">
-                        <label class="mb-1">3. Mục đích chính khi đầu tư ? </label>
+                        <label class="mb-1">3. Loại nhà anh/chị muốn mua </label>
                         <label class="check-content">
-                            Sang Mỹ nhanh chóng cho con đi học
-                            <input id="mucdichdautu1" class="" type="radio" name="mucdichdautu" value="Sang Mỹ nhanh chóng cho con đi học" checked />
+                            Căn hộ
+                            <input id="loainha1" class="" type="radio" name="loainha" value="Căn hộ" checked />
                             <span class="checkmark radio"></span>
                         </label>
                         <label class="check-content">
-                            Cho cả gia đình định cư Mỹ lâu dài
-                            <input  id="mucdichdautu2" class="" type="radio" name="mucdichdautu" value="Cho cả gia đình định cư Mỹ lâu dài" />
+                            Nhà đất biệt thự
+                            <input  id="loainha2" class="" type="radio" name="loainha" value="Nhà đất biệt thự" />
                             <span class="checkmark radio"></span>
                         </label>
                         <label class="check-content">
-                            Lấy thêm visa Mỹ để thuận tiện đi lại kinh doanh giữa Mỹ và Việt Nam
-                            <input  id="mucdichdautu3" class="" type="radio" name="mucdichdautu" value="Lấy thêm visa Mỹ để thuận tiện đi lại kinh doanh giữa Mỹ và Việt Nam" />
+                            Nhà ở liên kế
+                            <input  id="loainha3" class="" type="radio" name="loainha" value="Nhà ở liên kế" />
                             <span class="checkmark radio"></span>
                         </label>
                         <label class="check-content">
-                            Khác 
-                            <input  id="mucdichdautu4" class="" type="radio" name="mucdichdautu" value="Khác" />
-                            <span class="checkmark radio"></span>
-                        </label>
-                    </div>
-                    <div class="form-group">
-                        <label class="mb-1">4. Anh chị từng qua Mỹ chưa ?</label>
-                        <label class="check-content">
-                            Có
-                            <input id="tungquamy1" class="" type="radio" name="tungquamy" value="yes" checked />
-                            <span class="checkmark radio"></span>
-                        </label>
-                        <label class="check-content">
-                            Không
-                            <input  id="tungquamy2" class="" type="radio" name="tungquamy" value="no" />
+                            Khác
+                            <input  id="loainha4" class="" type="radio" name="loainha" value="Khác" />
                             <span class="checkmark radio"></span>
                         </label>
                     </div>
                     <div class="form-group">
-                        <label class="mb-1">5. Có người thân ở Mỹ hay không ?</label>
+                        <label class="mb-1">4. Anh/chị muốn mua nhà có mấy phòng ngủ & phòng tắm?</label>
+                        <input id="nhamayphongngu" class="form-control register__input required" type="text" name="nhamayphongngu" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-1">5. Anh/chị có muốn làm hồ sơ lấy quyền định cư Úc?</label>
                         <label class="check-content">
-                            Có
-                            <input id="nguoithan1" class="" type="radio" name="nguoithan" value="yes" checked />
+                            Muốn tìm hiểu thêm
+                            <input  id="sohodinhcu1" class="" type="radio" name="sohodinhcu" value="Muốn tìm hiểu thêm" />
                             <span class="checkmark radio"></span>
                         </label>
                         <label class="check-content">
-                            Không
-                            <input  id="nguoithan2" class="" type="radio" name="nguoithan" value="no" />
+                            Đã làm
+                            <input  id="sohodinhcu2" class="" type="radio" name="sohodinhcu" value="Đã làm" />
+                            <span class="checkmark radio"></span>
+                        </label>
+                        <label class="check-content">
+                            Không làm 
+                            <input  id="sohodinhcu3" class="" type="radio" name="sohodinhcu" value="Không làm" />
                             <span class="checkmark radio"></span>
                         </label>
                     </div>
                     <div class="form-group">
-                        <label class="mb-1">6. Trước đây đã từng nộp hồ sơ xin visa định cư Mỹ hay không ?</label>
-                        <label class="check-content">
-                            Có
-                            <input id="tungnoihoso1" class="" type="radio" name="tungnoihoso" value="yes" checked />
-                            <span class="checkmark radio"></span>
-                        </label>
-                        <label class="check-content">
-                            Không
-                            <input  id="tungnoihoso2" class="" type="radio" name="tungnoihoso" value="no" />
-                            <span class="checkmark radio"></span>
-                        </label>
+                        <label class="mb-1">6. Năm sinh của con lớn nhất?</label>
+                        <input id="namsinhcon" class="form-control register__input required" type="text" name="namsinhcon" autocomplete="off">
                     </div>
                     <div class="form-group">
-                        <label class="mb-1">7.	Số thành viên đi kèm hồ sơ ? </label>
-                        <input id="thanhviendikem" class="form-control register__input required" type="text" name="thanhviendikem" autocomplete="off">
+                        <label class="mb-1">7. Có yêu cầu khác cần tư vấn </label>
+                        <input id="yeucautuvankhac" class="form-control register__input" type="text" name="yeucautuvankhac" autocomplete="off">
                     </div>
                     <input type="button" name="previous" class="previous action-button" value="Quay lại" />
-                    <input type="button" value="Hoàn tất đăng ký" data-area="92020my" class="next action-button register__btn">
+                    <input type="button" value="Hoàn tất đăng ký" data-area="BDSUC92020" class="next action-button register__btn">
                 </fieldset>	  
             </div>
         </div>
