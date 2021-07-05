@@ -159,6 +159,13 @@ class globalSite {
         setSameHeight($('.content_6'));
         setSameHeight($('.content_7'));
         setSameHeight($('.content_8'));
+        setSameHeight($('.content_9'));
+        setSameHeight($('.content_10'));
+        setSameHeight($('.content_11'));
+        setSameHeight($('.content_12'));
+        setSameHeight($('.content_13'));
+        setSameHeight($('.content_14'));
+        setSameHeight($('.content_15'));
     }
     static blogDetailsCustom() {
         var getImg = $('.blog-details__main-wrap p img');
